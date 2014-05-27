@@ -1,0 +1,19 @@
+{
+  "name": "SFF-TVM-Prototype",
+  "version": "0.0.0",
+  "description": "A functional prototype of the redesigned Swiss Federal Railways TVM",
+  "main": "-",
+  "scripts": {
+    "test": "-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-simon/SFF-TVM-Prototype.git"
+  },
+  "author": "David Simon <me@davidsimon.ch>",
+  "license": "(none)",
+  "bugs": {
+    "url": "https://github.com/d-simon/SFF-TVM-Prototype/issues"
+  },
+  "homepage": "https://github.com/d-simon/SFF-TVM-Prototype"
+}
