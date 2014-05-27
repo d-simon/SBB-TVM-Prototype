@@ -12,6 +12,26 @@ module.exports = function (grunt) {
                     keepalive: true
                 }
             }
+        },
+        watch: {
+            scss: {
+                options: {
+                    livereload: false
+                },
+                files: ['public/scss'],
+                tasks: ['sass']
+            }
+        },
+        sass: {
+            main: {
+                files: [{
+                    expand: true,
+                    cwd: 'public/scss/',
+                    src: ['*.scss'],
+                    dest: 'public/css',
+                    ext: '.css'
+                }]
+            }
         }
     });
 
@@ -19,7 +39,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('local', ['server:local']);
     grunt.registerTask('server', ['server:local']);
-    grunt.registerTask('server:local', ['connect:local']);
+    grunt.registerTask('server:local', ['sass', 'connect:local', 'watch']);
 
     grunt.registerTask('default', ['local']);
 
