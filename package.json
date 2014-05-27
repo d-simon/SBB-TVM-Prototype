@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/d-simon/SFF-TVM-Prototype/issues"
   },
-  "homepage": "https://github.com/d-simon/SFF-TVM-Prototype"
+  "homepage": "https://github.com/d-simon/SFF-TVM-Prototype",
+  "devDependencies": {
+    "grunt": ">=0.4.1",
+    "grunt-contrib-connect": ">=0.2.0",
+    "load-grunt-tasks": "^0.4.0"
+  }
 }
