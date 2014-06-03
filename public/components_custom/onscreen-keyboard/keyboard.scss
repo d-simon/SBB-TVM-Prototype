@@ -1,0 +1,38 @@
+
+.button-key-k {
+    @extend .button.button-blue;
+}
+
+.button {
+	margin: 4px;
+}
+
+li {
+    list-style: none;
+}
+
+#keyboardCapitalLetter {
+	border: 0px;
+}
+
+#keyboard{
+    margin: 0 auto;
+    display:block;
+    text-align: center;
+ }
+
+#keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+
+#keyboardHeader {position:relative;}
+#keyboardHeader div {color:#fff; padding:3px; padding-left:15px; padding-right:15px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
+
+#virtualKeyboard {
+	position:absolute; 
+	bottom:0px;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+table, tr, .jsKeyboardRow {
+	background: rgba(0, 0, 0, 0.0) !important;
+	background-color: rgba(0, 0, 0, 0.0) !important;
+}
