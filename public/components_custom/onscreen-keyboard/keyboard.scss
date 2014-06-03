@@ -21,15 +21,26 @@ li {
     text-align: center;
  }
 
+ #virtualKeyboard {
+ 	width: 1024px;
+ }
+
 #keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 
 #keyboardHeader {position:relative;}
-#keyboardHeader div {color:#fff; padding:3px; padding-left:15px; padding-right:15px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
+#keyboardHeader div {color:#fff; padding:3px; padding-left:10px; padding-right:10px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
 
 #virtualKeyboard {
 	position:absolute; 
 	bottom:0px;
 	background-color: rgba(0, 0, 0, 0.8);
+}
+
+td {
+	padding-top: 16px !important;
+	padding-bottom: 16px !important;
+	padding-left: 28px !important;
+	padding-right: 28px !important;
 }
 
 table, tr, .jsKeyboardRow {
