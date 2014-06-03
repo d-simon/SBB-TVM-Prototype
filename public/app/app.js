@@ -3,7 +3,7 @@
 
     angular.module('tvmProtoApp', [
         'ui.router',
-        'agnularMoment',
+        'angularMoment',
 
         'common',
 
