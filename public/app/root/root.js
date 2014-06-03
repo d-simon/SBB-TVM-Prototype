@@ -7,7 +7,15 @@
                 $stateProvider
                     .state('root', {
                         abstract:true,
-                        templateUrl: 'app/root/root.tpl.html'
+                        views: {
+                            '': {
+                                templateUrl: 'app/root/root.tpl.html'
+                            },
+                            'header@root': {
+                                templateUrl: 'app/root/root-header.tpl.html'
+                            },
+                            'footer@root': {},
+                        }
                     });
             }
         ]);

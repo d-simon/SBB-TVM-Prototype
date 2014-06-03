@@ -10,7 +10,7 @@
         'tvmProtoApp.root',
         'tvmProtoApp.main'
     ])
-    .run(['amMoment', function (amMoment) {
+    .run(['$state', '$stateParams', 'amMoment', function ($state, $stateParams, amMoment) {
         amMoment.changeLanguage('de');
     }]);
 
