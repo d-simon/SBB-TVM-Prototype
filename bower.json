@@ -21,6 +21,7 @@
     "jquery": "~2.1.1",
     "bootstrap-sass": "~3.0.2",
     "angular-ui-router": "~0.2.10",
-    "foundation": "~5.2.3"
+    "foundation": "~5.2.3",
+    "angular-moment": "~0.7.1"
   }
 }
