@@ -10,7 +10,10 @@
         'tvmProtoApp.root',
         'tvmProtoApp.main'
     ])
-    .run(['$state', '$stateParams', 'amMoment', function ($state, $stateParams, amMoment) {
+    .config(['$urlRouterProvider', function ($urlRouterProvider) {
+        $urlRouterProvider.otherwise('/');
+    }])
+    .run(['amMoment', function (amMoment) {
         amMoment.changeLanguage('de');
     }]);
 

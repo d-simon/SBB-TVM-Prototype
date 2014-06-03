@@ -4,12 +4,15 @@
 @import 'buttons';
 @import '../components_custom/onscreen-keyboard/keyboard';
 
+$screenWidth: 1024px;
+$screenHeight: 768px;
+
 body {
     font-family: HelveticaNeue-Light;
     width:100%;
     height:100%;
-    min-width:1024px;
-    min-height:768px;
+    min-width:$screenWidth;
+    min-height:$screenHeight;
     background:#272829;
     color:white;
 }
@@ -17,8 +20,8 @@ body {
 main {
     display: block;
     position: absolute;
-    width:1024px;
-    height:768px;
+    width:$screenWidth;
+    height:$screenHeight;
     top:50%;
     left:50%;
     margin:-384px 0 0 -512px;
