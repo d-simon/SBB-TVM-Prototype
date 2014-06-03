@@ -1,7 +1,7 @@
 @import '../components/foundation/scss/normalize';
 @import '../components/foundation/scss/foundation';
-@import 'buttons';
 @import 'typography';
+@import 'buttons';
 @import '../components_custom/onscreen-keyboard/keyboard';
 
 body {
@@ -24,4 +24,21 @@ main {
     margin:-384px 0 0 -512px;
     background:url('../media/moods/sbb_bombardier.png');
     background-size:cover;
+}
+
+
+header.sbb-header {
+    margin-top: 18px;
+    height:19px;
+    background:url('../media/Logo_SBB_weiss_transparent.png') no-repeat;
+    background-position: center right;
+    background-size:auto 19px;
+
+    span[clock] {
+        text-align: center;
+        display: block;
+        width: 100%;
+        line-height: 19px;
+        @extend .text-shadow;
+    }
 }
