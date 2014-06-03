@@ -8,7 +8,7 @@
 
                 scope.$watch(attrs.clock, function (value) {
                     console.log('watch activated');
-                    format = value;
+                    format = value || 'M/d/yy h:mm:ss a';
                     updateTime();
                 });
 
