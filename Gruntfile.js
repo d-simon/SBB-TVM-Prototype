@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: false
                 },
-                files: ['public/scss/main.scss'],
+                files: ['public/scss/**'],
                 tasks: ['sass']
             }
         },
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'public/scss/',
-                    src: ['*.scss'],
+                    src: ['main.scss'],
                     dest: 'public/css',
                     ext: '.css'
                 }]
