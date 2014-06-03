@@ -8,7 +8,8 @@
         'angularMoment',
 
         'tvmProtoApp.root',
-        'tvmProtoApp.main'
+        'tvmProtoApp.main',
+        'tvmProtoApp.ticket'
     ])
     .config(['$urlRouterProvider', function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');

@@ -6,8 +6,11 @@
             function ($stateProvider) {
                 $stateProvider
                     .state('root.main', {
-                        url: '',
-                        templateUrl: 'app/main/main.tpl.html'
+                        url: '/',
+                        templateUrl: 'app/main/main.tpl.html',
+                        controller: function ($state,$stateParams) {
+                            console.log($state,$stateParams,$state.get());
+                        }
                     });
             }
         ]);

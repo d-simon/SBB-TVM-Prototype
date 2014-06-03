@@ -1,15 +1,15 @@
 (function () {
     'use strict';
 
-    angular.module('tvmProtoApp.ticket.route', [])
+    angular.module('tvmProtoApp.ticket.via', [])
         .config(['$stateProvider',
             function ($stateProvider) {
                 $stateProvider
-                    .state('root.ticket.route', {
-                        url: '/route',
+                    .state('root.ticket.via', {
+                        url: '/via',
                         views: {
                             'content@root.ticket': {
-                                templateUrl: 'app/ticket/route/route.tpl.html'
+                                templateUrl: 'app/ticket/via/via.tpl.html'
                             }
                         }
                     });
