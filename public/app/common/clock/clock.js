@@ -2,18 +2,18 @@
     'use strict';
 
     angular.module('common.clock', [])
-        .directive('clock', ['$timeout', 'dateFilter', function ($timeout, dateFilter) {
+        .directive('clock', ['$timeout', function ($timeout) {
             return function(scope, element, attrs) {
-                var format = 'M/d/yy h:mm:ss a';
+                var defaultDate = 'dddd DD MMM YYYY / HH:MM:ss',
+                    format = defaultDate;
 
                 scope.$watch(attrs.clock, function (value) {
-                    console.log('watch activated');
-                    format = value || 'M/d/yy h:mm:ss a';
+                    format = value || defaultDate;
                     updateTime();
                 });
 
                 function updateTime(){
-                    var dt = dateFilter(new Date(), format);
+                    var dt = moment().format(format);
                     element.text(dt);
                 }
 

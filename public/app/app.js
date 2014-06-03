@@ -3,12 +3,15 @@
 
     angular.module('tvmProtoApp', [
         'ui.router',
-        'angularMoment',
 
         'common',
+        'angularMoment',
 
         'tvmProtoApp.root',
         'tvmProtoApp.main'
-    ]);
+    ])
+    .run(['amMoment', function (amMoment) {
+        amMoment.changeLanguage('de');
+    }]);
 
 }());
