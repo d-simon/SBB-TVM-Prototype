@@ -139,13 +139,12 @@ var jsKeyboard = {
         // 2nd row
                [{value: 65, buttonClass: "button button_a" }, { value: 83 }, { value: 68 }, { value: 70 },
                { value: 71 }, { value: 72 }, { value: 74 }, { value: 75 }, { value: 76 },
-               { value: "Best&aumltigen", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" }],
+               ],
         // 3rd row
-               [{ value: 89 }, { value: 88 }, { value: 67 }, { value: 86 }, { value: 66 }, { value: 78 },
-               { value: 77 }, { value: 44 }, { value: 46 }],
-        // 4th row
-               [{ value: "Leerzeichen", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" }]
-            ]
+               [{ value: "Leerzeichen", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" },
+               { value: 89 }, { value: 88 }, { value: 67 }, { value: 86 }, { value: 66 }, { value: 78 },
+               { value: 77 }, { value: "Best&aumltigen", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" }]
+           ]
 
     }
 }
