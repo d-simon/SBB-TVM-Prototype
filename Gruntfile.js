@@ -8,8 +8,7 @@ module.exports = function (grunt) {
                 options: {
                     base: 'public',
                     hostname: '0.0.0.0',
-                    port: 9001,
-                    keepalive: true
+                    port: 9001
                 }
             }
         },
@@ -18,7 +17,7 @@ module.exports = function (grunt) {
                 options: {
                     livereload: false
                 },
-                files: ['public/scss'],
+                files: ['public/scss/main.scss'],
                 tasks: ['sass']
             }
         },

@@ -1,13 +1,13 @@
 (function () {
     'use strict';
 
-    angular.module('tvmProtoApp.root', [])
+    angular.module('tvmProtoApp.main', [])
         .config(['$stateProvider',
             function ($stateProvider) {
                 $stateProvider
-                    .state('root', {
-                        abstract:true,
-                        templateUrl: 'app/root/root.tpl.html'
+                    .state('root.main', {
+                        url: '',
+                        templateUrl: 'app/main/main.tpl.html'
                     });
             }
         ]);

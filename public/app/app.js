@@ -4,7 +4,8 @@
     angular.module('tvmProtoApp', [
         'ui.router',
 
-        'tvmProtoApp.root'
+        'tvmProtoApp.root',
+        'tvmProtoApp.main'
     ]);
 
 }());
