@@ -138,12 +138,14 @@ var jsKeyboard = {
                { value: "L&oumlschen", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button button_del", keyClass: "key key_del" }],
         // 2nd row
                [{value: 65, buttonClass: "button button_a" }, { value: 83 }, { value: 68 }, { value: 70 },
-               { value: 71 }, { value: 72 }, { value: 74 }, { value: 75 }, { value: 76 },
+               { value: 71 }, { value: 72 }, { value: 74 }, { value: 75 }, { value: 76 }, { value: "Best&aumltigen", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" }
                ],
         // 3rd row
-               [{ value: "Leerzeichen", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" },
-               { value: 89 }, { value: 88 }, { value: 67 }, { value: 86 }, { value: 66 }, { value: 78 },
-               { value: 77 }, { value: "Best&aumltigen", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" }]
+               [{ value: "Stop", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
+               { value: "Hilfe", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
+               { value: 89 }, { value: 88 }, { value: 67 }, { value: 86 }, { value: 66 }, { value: 78 }, { value: 77 },
+               { value: "Leerzeichen", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" } 
+               ]
            ]
 
     }

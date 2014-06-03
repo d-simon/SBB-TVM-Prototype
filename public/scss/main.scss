@@ -1,5 +1,6 @@
 @import '../components/foundation/scss/normalize';
 @import '../components/foundation/scss/foundation';
+@import '../components_custom/onscreen-keyboard/keyboard';
 @import 'buttons';
 
 body {
@@ -8,4 +9,3 @@ body {
 
 
 
-@import '../components_custom/onscreen-keyboard/keyboard';
