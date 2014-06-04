@@ -15,7 +15,8 @@
                         data: {
                             step: 1,
                             back: 'root.ticket.route',
-                            next: 'root.ticket.options'
+                            next: 'root.ticket.options',
+                            title: 'Reiseweg – Via wählen'
                         }
                     });
             }

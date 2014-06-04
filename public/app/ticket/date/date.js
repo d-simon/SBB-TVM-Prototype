@@ -15,7 +15,8 @@
                         data: {
                             step: 3,
                             back: 'root.ticket.options',
-                            next: 'root.ticket.pay'
+                            next: 'root.ticket.pay',
+                            title: 'Datum bestätigen'
                         }
                     });
             }

@@ -3,7 +3,8 @@
 
     // Common module for reusable components inside/across projects
     angular.module('common', [
-        'common.clock'
+        'common.clock',
+        'common.animations'
     ]);
 
 }());

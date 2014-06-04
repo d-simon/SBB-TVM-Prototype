@@ -16,7 +16,8 @@
                             step: 4,
                             stop: true,
                             back: 'root.ticket.date',
-                            next: false
+                            next: false,
+                            titel: 'Bezahlen'
                         }
                     });
             }

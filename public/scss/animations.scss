@@ -1,3 +1,9 @@
+.ng-hide-block.ng-hide-add, .ng-hide-block.ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+
 // Scale
 .animate-scale {
 }
@@ -35,30 +41,38 @@
     transform:scale3d(0.5, 0.5, 0.5);
 }
 
-// Fade
 .animate-fade {
-}
-.animate-fade.ng-enter, .animate-fade.ng-leave {
-    position: absolute;
-    left: 0;
-    right: 0;
     -webkit-transition:all .5s ease-in-out;
     -moz-transition:all .5s ease-in-out;
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
-}
-.animate-fade.ng-enter {
-    opacity: 0;
-}
-.animate-fade.ng-enter-active {
     opacity: 1;
 }
-.animate-fade.ng-leave {
-    opacity: 1;
-}
-.animate-fade.ng-leave-active {
+.animate-fade.ng-hide {
     opacity: 0;
 }
+
+
+.animate-h-scale {
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+    opacity: 1;
+
+    -webkit-transform:scale3d(1,1,1);
+    -moz-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1);
+}
+.animate-h-scale.ng-hide {
+    opacity: 0;
+
+    -webkit-transform:scale3d(1,0,1);
+    -moz-transform:scale3d(1,0,1);
+    transform:scale3d(1,0,1);
+}
+
+
 
 
 // Right
@@ -72,9 +86,9 @@
 }
 .animate-in.ng-enter {
     opacity: 0;
-    -webkit-transform:translate3d(0, 1024px, 0);
-    -moz-transform:translate3d(0, 1024px, 0);
-    transform:translate3d(0, 1024px, 0);
+    -webkit-transform:translate3d(0, 100px, 0);
+    -moz-transform:translate3d(0, 100px, 0);
+    transform:translate3d(0, 100px, 0);
 }
 .animate-in.ng-enter-active {
     opacity: 1;
@@ -90,9 +104,9 @@
 }
 .animate-in.ng-leave-active {
     opacity: 0;
-    -webkit-transform:translate3d(0, -1024px, 0);
-    -moz-transform:translate3d(0, -1024px, 0);
-    transform:translate3d(0,-1024px, 0);
+    -webkit-transform:translate3d(0, -100px, 0);
+    -moz-transform:translate3d(0, -100px, 0);
+    transform:translate3d(0,-100px, 0);
 }
 
 
@@ -107,9 +121,9 @@
 }
 .animate-back.ng-enter {
     opacity: 0;
-    -webkit-transform:translate3d(0, -1024px, 0);
-    -moz-transform:translate3d(0, -1024px, 0);
-    transform:translate3d(0, -1024px, 0);
+    -webkit-transform:translate3d(0, -100px, 0);
+    -moz-transform:translate3d(0, -100px, 0);
+    transform:translate3d(0, -100px, 0);
 }
 .animate-back.ng-enter-active {
     opacity: 1;
@@ -125,7 +139,7 @@
 }
 .animate-back.ng-leave-active {
     opacity: 0;
-    -webkit-transform:translate3d(0, 1024px, 0);
-    -moz-transform:translate3d(0, 1024px, 0);
-    transform:translate3d(0, 1024px, 0);
+    -webkit-transform:translate3d(0, 100px, 0);
+    -moz-transform:translate3d(0, 100px, 0);
+    transform:translate3d(0, 100px, 0);
 }

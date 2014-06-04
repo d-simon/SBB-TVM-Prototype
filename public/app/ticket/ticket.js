@@ -31,13 +31,14 @@
                     })
             }
         ])
-        .controller('TicketCtrl', ['$scope', 'TicketService', function ($scope, ticketService) {
+        .controller('TicketCtrl', ['$scope', '$state', 'TicketService', function ($scope, $state, ticketService) {
 
             $scope.ticket = ticketService.ticket;
-
+            $scope.stepTitle = $state.current.data.title || false;
+            $scope.step = $state.current.data.step || 0;
             // Animation
             $scope.animateBack = false;
-            $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
+            $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
                 if (fromState.data && typeof fromState.data.step != 'undefined' &&
                       toState.data && typeof   toState.data.step != 'undefined' &&
                     toState.data.step > fromState.data.step)
@@ -46,6 +47,8 @@
                 } else {
                     $scope.animateBack = true;
                 }
+                $scope.stepTitle = toState.data.title || false;
+                $scope.step = $state.current.data.step || $scope.step;
             });
         }]);
 

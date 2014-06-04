@@ -16,7 +16,8 @@
                             step: 0,
                             stop: true,
                             back: 'root.main',
-                            next: 'root.ticket.via'
+                            next: 'root.ticket.via',
+                            title: 'Reiseweg – Zielort wählen'
                         }
                     });
             }
