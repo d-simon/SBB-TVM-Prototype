@@ -3,9 +3,22 @@
 </div>
 
 <div class="ticket-sidebar--step">
-	ab <span class="bold">{{ticket.date.from}}</span>
-	<br>
-	bis <span class="bold">{{ticket.date.until}}</span>
+	<div class="row">
+        <div class="small-2 columns">
+            ab 
+        </div>
+        <div class="small-10 columns">
+            <span class="bold">{{ticket.date.from}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-2 columns">
+            bis
+        </div>
+        <div class="small-10 columns">
+            <span class="bold">{{ticket.date.until}}</span>
+        </div>
+    </div>
 </div>
 
 <div class="ticket-sidebar--step">
