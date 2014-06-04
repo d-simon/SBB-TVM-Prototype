@@ -3,6 +3,7 @@
 
     angular.module('tvmProtoApp', [
         'ui.router',
+        'ngAnimate',
 
         'common',
         'angularMoment',
@@ -14,7 +15,7 @@
     .config(['$urlRouterProvider', function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
     }])
-    .run(['amMoment', function (amMoment) {
+    .run([ 'amMoment', function (amMoment) {
         amMoment.changeLanguage('de');
     }]);
 

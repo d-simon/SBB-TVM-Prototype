@@ -13,7 +13,8 @@
                         abstract: true,
                         views: {
                             '': {
-                                templateUrl: 'app/ticket/ticket.tpl.html'
+                                templateUrl: 'app/ticket/ticket.tpl.html',
+                                controller: 'TicketCtrl'
                             },
                             'sidebar@root.ticket': {
                                 templateUrl: 'app/ticket/ticket-sidebar.tpl.html'
@@ -21,6 +22,18 @@
                         }
                     })
             }
-        ]);
+        ])
+        .controller('TicketCtrl', ['$scope', function ($scope) {
+            console.log($scope);
+            $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
+                if (   fromState.data && fromState.data.step &&
+                         toState.data && toState.data.step   &&
+                    toState.data.step > fromState.data.step) {
+                    $scope.animateLeft = true;
+                } else {
+                    $scope.animateLeft = false;
+                }
+            });
+        }]);
 
 }());

@@ -4,4 +4,4 @@ Sidebar:
 <div ui-view="sidebar"></div>
 
 "Main":
-<div ui-view="content"></div>
+<div ui-view="content" ng-class="{'animate-left': !animateLeft, 'animate-right': animateLeft}"></div>

@@ -11,6 +11,9 @@
                             'content@root.ticket': {
                                 templateUrl: 'app/ticket/route/route.tpl.html'
                             }
+                        },
+                        data: {
+                            step: 0
                         }
                     });
             }

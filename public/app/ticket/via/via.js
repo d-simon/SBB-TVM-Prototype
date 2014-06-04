@@ -11,6 +11,9 @@
                             'content@root.ticket': {
                                 templateUrl: 'app/ticket/via/via.tpl.html'
                             }
+                        },
+                        data: {
+                            step: 1
                         }
                     });
             }
