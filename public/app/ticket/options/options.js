@@ -1,8 +1,4 @@
-
-                            step: 1,
-                            stop: true,
-                            back: 'root.ticket.route',
-                            next: 'root.ticket.options'(function () {
+(function () {
     'use strict';
 
     angular.module('tvmProtoApp.ticket.options', [])
