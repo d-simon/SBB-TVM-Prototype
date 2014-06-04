@@ -1,4 +1,4 @@
-<footer class="sbb-footer">
+<footer class="sbb-footer" ng-show="state.stop && !!state.back && !!state.next">
     <nav class="row">
         <div class="small-9 columns">
             <a class="button button-red button-squash" ng-show="state.stop" ng-click="$state.go('root.main')">Stop</a>

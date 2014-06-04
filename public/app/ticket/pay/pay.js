@@ -14,6 +14,7 @@
                         },
                         data: {
                             step: 4,
+                            stop: true,
                             back: 'root.ticket.date',
                             next: false
                         }

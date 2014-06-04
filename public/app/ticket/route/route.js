@@ -14,7 +14,8 @@
                         },
                         data: {
                             step: 0,
-                            back: false,
+                            stop: true,
+                            back: true,
                             next: 'root.ticket.via'
                         }
                     });
