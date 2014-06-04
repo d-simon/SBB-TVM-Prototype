@@ -26,7 +26,11 @@
                     })
             }
         ])
-        .controller('TicketCtrl', ['$scope', function ($scope) {
+        .controller('TicketCtrl', ['$scope', 'TicketService', function ($scope, ticketService) {
+
+            $scope.ticket = ticketService.ticket;
+
+            // Animation
             $scope.animateBack = false;
             $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
                 if (fromState.data && typeof fromState.data.step != 'undefined' &&

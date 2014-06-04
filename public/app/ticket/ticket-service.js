@@ -2,10 +2,10 @@
     'use strict';
 
     angular.module('tvmProtoApp.ticket')
-        .factory('TicketService', [
-            function () {
+        .factory('TicketService', ['$http',
+            function ($http) {
 
-                var defaultState = {
+                var defaultTicket = {
                     from: {
                         text: 'Zürich HB',
                         selected: true
@@ -34,10 +34,21 @@
                     }
                 };
 
-                var state = angular.copy(defaultState),
-                    service = {};
+                var service = {};
 
-                service.
+                service.ticket = angular.copy(defaultTicket);
+
+                service.getJourneyStop = function (suggestion) {
+                    return $http.get('http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&tpl=suggest2json&encoding=utf-8&REQ0JourneyStopsS0A=7&getstop=1&noSession=yes&REQ0JourneyStopsB=10&' + 
+                                     'REQ0JourneyStopsS0G=' +
+                                      suggestion +
+                                     '&js=true&');
+                };
+                service.resetTicket = function () {
+                    service.ticket = angular.copy(defaultTicket);
+                };
+
+                return service;
             }
         ]);
 
