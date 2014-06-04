@@ -35,3 +35,63 @@ footer.sbb-footer {
     left: 0;
     background: rgba(86,98,115,0.90);
 }
+
+// Scale
+.animate-split {
+    position: absolute;
+    left: 0;
+    right: 0;
+    &, .animate-split-left, .animate-split-right {
+        -webkit-transition:all .5s ease-in-out;
+        -moz-transition:all .5s ease-in-out;
+        -o-transition:all .5s ease-in-out;
+        transition:all .5s ease-in-out;
+    }
+    .animate-split-left {
+        position: absolute;
+    }
+    .animate-split-right {
+        position: absolute;
+    }
+}
+
+.animate-split.ng-enter,
+.animate-split.ng-leave {
+    position: absolute;
+}
+.animate-split.ng-enter {
+    opacity: 0;
+    .animate-split-left {
+        left: -512px;
+    }
+    .animate-split-right {
+        right: -512px;
+    }
+}
+.animate-split.ng-enter-active {
+    opacity: 1;
+    .animate-split-left {
+        left: 0;
+    }
+    .animate-split-right {
+        right: 0;
+    }
+}
+.animate-split.ng-leave {
+    opacity: 1;
+    .animate-split-left {
+        left: 0;
+    }
+    .animate-split-right {
+        right: 0;
+    }
+}
+.animate-split.ng-leave-active {
+    opacity: 0;
+    .animate-split-left {
+        left: -512px;
+    }
+    .animate-split-right {
+        right: -512px;
+    }
+}
