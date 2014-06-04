@@ -28,8 +28,8 @@
                         }
                     },
                     date: {
-                        from: moment().calendar(),
-                        until: moment().add('days', 7).calendar()
+                        from: moment().format('L'),
+                        until: moment().add('days', 7).format('L')
                     },
                     price: 43
                 };
