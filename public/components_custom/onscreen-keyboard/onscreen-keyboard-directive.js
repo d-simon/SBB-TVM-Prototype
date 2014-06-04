@@ -27,10 +27,8 @@
                     });
 
                     $onscreenKeyboard.on('onScreenKeyPressed', function () {
-                        if (jsKeyboard.currentElement == $(this)) {
-                            console.log(arguments);
-                        }
-                    })
+                        $inputField.trigger('input');
+                    });
                 }
         }]);
 
