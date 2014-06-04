@@ -99,15 +99,17 @@ var jsKeyboard = {
 
     },
     del: function () {
+        jsKeyboard.currentElementCursorPosition = jsKeyboard.currentElement.val().length;
+
         var a = jsKeyboard.currentElement.val(),
             pos = jsKeyboard.currentElementCursorPosition,
             output = [a.slice(0, pos - 1), a.slice(pos)].join('');
         jsKeyboard.currentElement.val(output);
-        jsKeyboard.currentElementCursorPosition--; //-1 cursor
-        if (jsKeyboard.currentElementCursorPosition < 0)
-        	jsKeyboard.currentElementCursorPosition = 0;
+        jsKeyboard.currentElementCursorPosition = jsKeyboard.currentElement.val().length;
         jsKeyboard.updateCursor(output);
+
         $('#onscreen-keyboard').trigger("onScreenKeyPressed", "delete");
+
 
     },
     enter: function () {
