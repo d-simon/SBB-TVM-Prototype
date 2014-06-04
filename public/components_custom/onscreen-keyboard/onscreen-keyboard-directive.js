@@ -31,8 +31,7 @@
                         $scope.isActive = true;
                     });
 
-                    $onscreenKeyboard.on('onScreenKeyPressed', function (key) {
-                        $inputField.trigger('input');
+                    $onscreenKeyboard.on('onScreenKeyPressed', function (event, key) {
                         setTimeout(function() {
                             $inputField.trigger('input');
                         }, 30);

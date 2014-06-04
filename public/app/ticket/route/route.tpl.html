@@ -1,11 +1,18 @@
 <a class="button button-red" ui-sref="root.ticket.via">weiter</a>
 
 <div class="button-group">
-    <li><input keyboard class="button" ng-class="isActive: 'button-inactive'" ng-model="ticket.from.text" readonly="true" /></li>
+    <li>
+        <div keyboard>
+            <input class="button" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.from.text" readonly="true" />
+        </div>
+    </li>
     <li><div class="button button-red">ändern</div></li>
 </div>
 <div class="button-group">
-    <li><a class="button">t</a></li>
-    <li><a class="button">t</a></li>
+    <li>
+        <div keyboard>
+            <input class="button" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.to.text" readonly="true" />
+        </div>
+    </li>
+    <li><div class="button button-red">ändern</div></li>
 </div>
-    <input keyboard class="button" ng-class="isActive: 'button-inactive'" ng-model="ticket.to.text" readonly="true" autofocus />
