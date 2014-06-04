@@ -30,7 +30,7 @@
             $scope.animateBack = false;
             $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
                 if (fromState.data && typeof fromState.data.step != 'undefined' &&
-                      toState.data &&   typeof toState.data.step != 'undefined' &&
+                      toState.data && typeof   toState.data.step != 'undefined' &&
                     toState.data.step > fromState.data.step)
                 {
                     $scope.animateBack = false;
