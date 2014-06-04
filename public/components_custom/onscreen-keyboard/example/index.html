@@ -3,7 +3,7 @@
         <meta charset="utf-8" user-scalable="no">
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>jQuery On-Screen Keyboard Demo | jQuery4u</title>
+        <title>On-Screen Keyboard Demo</title>
         <meta name="description" content="">
         <meta name="keywords" content="jQuery OnScreen Keyboard">
         <meta name="viewport" content="width=device-width">
@@ -11,14 +11,17 @@
         <link rel="stylesheet" href="../../../css/main.css">
 
     </head>
-    <body>
+    <body OnLoad="document.inputform.destination.focus();">
         <div id="main" class="container">
 
             <h1>jQuery On-Screen Keyboard Demo</h1>
 
             <p>This is a demo of the on-screen keyboard powered by jQuery.</p>
+            <form name="inputform">
+                <input class="input" id="origin" name="origin" type="text" placeholder="Abfahrtsort eingeben..." readonly="true">
 
-            <input class="input" name="username" type="text" placeholder="Zielort eingeben..." readonly="true">
+                <input class="input" id="destination" name="destination" type="text" placeholder="Zielort eingeben..." readonly="true" autofocus>
+            </form>
 
             <div id="virtualKeyboard"></div>
 
