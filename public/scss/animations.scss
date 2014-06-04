@@ -40,8 +40,6 @@
 
 .animate-in[ui-view].ng-enter, .animate-in[ui-view].ng-leave {
     position: absolute;
-    left: 0;
-    in: 0;
     -webkit-transition:all .5s ease-in-out;
     -moz-transition:all .5s ease-in-out;
     -o-transition:all .5s ease-in-out;
@@ -77,8 +75,6 @@
 
 .animate-back[ui-view].ng-enter, .animate-back[ui-view].ng-leave {
     position: absolute;
-    left: 0;
-    right: 0;
     -webkit-transition:all .5s ease-in-out;
     -moz-transition:all .5s ease-in-out;
     -o-transition:all .5s ease-in-out;

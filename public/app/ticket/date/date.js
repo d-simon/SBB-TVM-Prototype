@@ -13,7 +13,9 @@
                             }
                         },
                         data: {
-                            step: 3
+                            step: 3,
+                            back: 'root.ticket.options',
+                            next: 'root.ticket.pay'
                         }
                     });
             }

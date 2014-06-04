@@ -13,7 +13,9 @@
                             }
                         },
                         data: {
-                            step: 1
+                            step: 1,
+                            back: 'root.ticket.route',
+                            next: 'root.ticket.options'
                         }
                     });
             }

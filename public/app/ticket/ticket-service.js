@@ -17,8 +17,7 @@
                             direct: true,
                             text: '',
                             selected: false
-                        },
-                        price: 0
+                        }
                     },
                     options: {
                         oneway: true,
@@ -30,8 +29,9 @@
                     },
                     date: {
                         from: moment(),
-                        validfor: 7
-                    }
+                        validfor: 7 // days? / moment + 7
+                    },
+                    price: 0
                 };
 
                 var service = {};

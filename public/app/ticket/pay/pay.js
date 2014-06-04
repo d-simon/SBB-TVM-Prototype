@@ -13,7 +13,9 @@
                             }
                         },
                         data: {
-                            step: 4
+                            step: 4,
+                            back: 'root.main.date',
+                            next: false
                         }
                     });
             }

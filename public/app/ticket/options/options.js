@@ -1,4 +1,8 @@
-(function () {
+
+                            step: 1,
+                            stop: true,
+                            back: 'root.ticket.route',
+                            next: 'root.ticket.options'(function () {
     'use strict';
 
     angular.module('tvmProtoApp.ticket.options', [])
@@ -13,7 +17,9 @@
                             }
                         },
                         data: {
-                            step: 2
+                            step: 2,
+                            back: 'root.ticket.via',
+                            next: 'root.ticket.date'
                         }
                     });
             }

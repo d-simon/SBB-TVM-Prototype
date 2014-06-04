@@ -13,7 +13,9 @@
                             }
                         },
                         data: {
-                            step: 0
+                            step: 0,
+                            back: false,
+                            next: 'root.ticket.via'
                         }
                     });
             }
