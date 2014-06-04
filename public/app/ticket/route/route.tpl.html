@@ -1,4 +1,11 @@
 <a class="button button-red" ui-sref="root.ticket.via">weiter</a>
 
-<input keyboard ng-model="ticket.from.text" readonly="true" />
-<input keyboard ng-model="ticket.to.text" readonly="true" />
+<div class="button-group">
+    <li><input keyboard class="button" ng-class="isActive: 'button-inactive'" ng-model="ticket.from.text" readonly="true" /></li>
+    <li><div class="button button-red">ändern</div></li>
+</div>
+<div class="button-group">
+    <li><a class="button">t</a></li>
+    <li><a class="button">t</a></li>
+</div>
+    <input keyboard class="button" ng-class="isActive: 'button-inactive'" ng-model="ticket.to.text" readonly="true" autofocus />

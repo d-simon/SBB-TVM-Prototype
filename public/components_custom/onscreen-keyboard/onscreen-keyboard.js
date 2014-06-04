@@ -107,6 +107,7 @@ var jsKeyboard = {
         if (jsKeyboard.currentElementCursorPosition < 0)
         	jsKeyboard.currentElementCursorPosition = 0;
         jsKeyboard.updateCursor(output);
+        $('#onscreen-keyboard').trigger("onScreenKeyPressed", "delete");
 
     },
     enter: function () {
@@ -125,6 +126,7 @@ var jsKeyboard = {
         jsKeyboard.currentElement.val(output);
         jsKeyboard.currentElementCursorPosition++; //+1 cursor
         jsKeyboard.updateCursor(output);
+        $('#onscreen-keyboard').trigger("onScreenKeyPressed", "space");
     },
     writeSpecial: function (m) {
         var a = jsKeyboard.currentElement.val(),
