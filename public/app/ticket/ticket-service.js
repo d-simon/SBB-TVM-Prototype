@@ -31,7 +31,10 @@
                         from: moment().format('L'),
                         until: moment().add('days', 7).format('L')
                     },
-                    price: 43
+                    price: {
+                        chf: 36,
+                        eur: 30
+                    }
                 };
 
                 var service = {};

@@ -6,7 +6,7 @@
             CHF
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.price | currency:""}}
+            {{ticket.price.chf | currency:""}}
         </div>
     </div>
     <div class="row info-row">
@@ -14,7 +14,7 @@
             EUR
         </div>
         <div class="small-9 right columns ticket-label-right">
-            {{ticket.price | currency:""}}
+            {{ticket.price.eur | currency:""}}
         </div>
     </div>
 </div>
