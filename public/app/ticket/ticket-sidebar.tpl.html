@@ -1,35 +1,94 @@
 <div class="ticket-sidebar--step">
-	{{ticket.price | currency:"CHF "}}
+	<div class="row">
+        <div class="small-3 columns ticket-label-left ticket-highlight">
+			CHF
+		</div>
+        <div class="small-9 columns ticket-label-right ticket-highlight">
+            {{ticket.price | currency:""}}
+        </div>
+    </div>	
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+			EUR
+		</div>
+        <div class="small-9 columns ticket-label-right">
+            {{ticket.price | currency:""}}
+        </div>
+    </div>	
 </div>
+
+<div id="border"></div>
 
 <div class="ticket-sidebar--step">
 	<div class="row">
-        <div class="small-2 columns">
+        <div class="small-3 columns ticket-label-left">
             ab 
         </div>
-        <div class="small-10 columns">
+        <div class="small-9 columns ticket-label-right ticket-highlight">
             <span class="bold">{{ticket.date.from}}</span>
         </div>
     </div>
     <div class="row">
-        <div class="small-2 columns">
+        <div class="small-3 columns ticket-label-left">
             bis
         </div>
-        <div class="small-10 columns">
+        <div class="small-9 columns ticket-label-right ticket-highlight">
             <span class="bold">{{ticket.date.until}}</span>
         </div>
     </div>
 </div>
 
-<div class="ticket-sidebar--step">
-	<span class="bold">{{ticket.options.tickets.full}}</span> x Regul&aumlr
-	<br>
-	<span class="bold">{{ticket.options.tickets.half}}</span> x Erm&aumlssigt
-</div>
+<div id="border"></div>
 
 <div class="ticket-sidebar--step">
-	von <span class="bold">{{ticket.from.text}}</span>
-	<br>
-	nach <span class="bold">{{ticket.to.text || '…'}}</span>
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+			{{ticket.options.tickets.full}} x
+		</div>
+        <div class="small-9 columns ticket-label-right">
+            Regul&aumlr
+        </div>
+    </div>	
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+			{{ticket.options.tickets.half}} x
+		</div>
+        <div class="small-9 columns ticket-label-right">
+            Erm&aumlssigt
+        </div>
+    </div>	
+</div>
+
+<div id="border"></div>
+
+<div class="ticket-sidebar--step">
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+		</div>
+        <div class="small-9 columns ticket-label-right">
+       		hin / zurueck
+        </div>
+    </div>
+</div>
+
+<div id="border"></div>
+
+<div class="ticket-sidebar--step">
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+			von
+		</div>
+        <div class="small-9 columns ticket-label-right ticket-highlight">
+            {{ticket.from.text}}
+        </div>
+    </div>	
+	<div class="row">
+        <div class="small-3 columns ticket-label-left">
+			nach
+		</div>
+        <div class="small-9 columns ticket-label-right ticket-highlight">
+            {{ticket.to.text || '…'}}
+        </div>
+    </div>	
 </div>
 
