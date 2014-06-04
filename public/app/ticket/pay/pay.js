@@ -14,7 +14,7 @@
                         },
                         data: {
                             step: 4,
-                            back: 'root.main.date',
+                            back: 'root.ticket.date',
                             next: false
                         }
                     });
