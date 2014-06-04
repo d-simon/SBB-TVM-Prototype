@@ -1,13 +1,15 @@
 @import '../components/foundation/scss/normalize';
 @import '../components/foundation/scss/foundation';
+
+$screenWidth: 1024px;
+$screenHeight: 768px;
+
 @import 'typography';
 @import 'buttons';
 @import 'animations';
 @import '../app/ticket/ticket';
+@import '../app/main/main';
 @import '../components_custom/onscreen-keyboard/keyboard';
-
-$screenWidth: 1024px;
-$screenHeight: 768px;
 
 body {
     font-family: HelveticaNeue-Light;
@@ -19,40 +21,3 @@ body {
     color:white;
 }
 
-main {
-    display: block;
-    position: absolute;
-    width:$screenWidth;
-    height:$screenHeight;
-    top:50%;
-    left:50%;
-    margin:-384px 0 0 -512px;
-    background:url('../media/moods/sbb_bombardier.png');
-    background-size:cover;
-}
-
-
-header.sbb-header {
-    margin-top: 18px;
-    height:19px;
-    background:url('../media/Logo_SBB_weiss_transparent.png') no-repeat;
-    background-position: center right;
-    background-size:auto 19px;
-
-    span[clock] {
-        text-align: center;
-        display: block;
-        width: 100%;
-        line-height: 19px;
-        @extend .text-shadow;
-    }
-}
-
-footer.sbb-footer {
-    width: $screenWidth;
-    height:64px;
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    background: rgba(86,98,115,0.90);
-}
