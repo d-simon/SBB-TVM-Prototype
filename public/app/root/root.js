@@ -15,7 +15,8 @@
                                 templateUrl: 'app/root/header/header.tpl.html'
                             },
                             'footer@root': {
-                                templateUrl: 'app/root/footer/footer.tpl.html'
+                                templateUrl: 'app/root/footer/footer.tpl.html',
+                                controller: 'FooterCtrl'
                             }
                         }
                     });
