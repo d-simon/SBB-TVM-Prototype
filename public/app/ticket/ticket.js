@@ -22,6 +22,11 @@
                             'sidebar@root.ticket': {
                                 templateUrl: 'app/ticket/ticket-sidebar.tpl.html'
                             }
+                        },
+                        data: {
+                            stop: true,
+                            back: 'root.ticket.main',
+                            next: false
                         }
                     })
             }
