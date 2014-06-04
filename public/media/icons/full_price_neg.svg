@@ -4,9 +4,10 @@
 <svg version="1.1" id="Ebene_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560"
 	 enable-background="new 0 0 960 560" xml:space="preserve">
+<rect x="299" y="67" fill="none" width="666" height="560"/>
 <g>
-	<ellipse id="Oval" fill="#FFFFFF" cx="820" cy="164.6" rx="84.4" ry="84.4"/>
-	<path id="Shape" fill="#FFFFFF" d="M764.3,278c-51.9,0-94.1,42.2-94.1,94.1V589c0,38.4,299.5,38.4,299.5,0V372
-		c0-51.9-42.2-94.1-94.1-94.1H764.3z"/>
+	<ellipse id="Oval" fill="#FFFFFF" cx="462" cy="164.6" rx="84.4" ry="84.4"/>
+	<path id="Shape" fill="#FFFFFF" d="M406.3,278c-51.9,0-94.1,42.2-94.1,94.1V589c0,38.4,299.5,38.4,299.5,0V372
+		c0-51.9-42.2-94.1-94.1-94.1H406.3V278z"/>
 </g>
 </svg>
