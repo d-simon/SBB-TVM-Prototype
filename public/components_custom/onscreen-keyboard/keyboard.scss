@@ -18,7 +18,7 @@ li {
 #keyboard{
     margin: 0 auto;
     display:block;
-    text-align: center;
+    // text-align: center;
  }
 
  #virtualKeyboard {
@@ -46,4 +46,12 @@ td {
 table, tr, .jsKeyboardRow {
 	background: rgba(0, 0, 0, 0.0) !important;
 	background-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.button-a {
+	margin-left: 110px;
+}
+
+.button-q {
+	margin-left: 60px;
 }
