@@ -17,7 +17,11 @@ module.exports = function (grunt) {
                 options: {
                     livereload: false
                 },
-                files: ['public/scss/**'],
+                files: [
+                    'public/scss/**/*.scss',
+                    'public/components_custom/**/*.scss',
+                    'public/app/**/*.scss'
+                ],
                 tasks: ['sass']
             }
         },
