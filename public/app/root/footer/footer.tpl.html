@@ -1,8 +1,11 @@
 <footer class="sbb-footer show-fade ng-hide-block" ng-show="state.stop || !!state.back || !!state.next">
     <nav class="row">
-        <div class="small-9 columns">
+        <div class="small-3 columns">
             <a class="button button-red button-squash show-fade" ng-show="state.stop" ng-click="$state.go('root.main')">Stop</a>
             <a class="button button-blue button-squash show-fade" ng-show="!!state.back" ng-click="$state.go(state.back)">Zurück</a>
+        </div>
+        <div class="small-6 columns">
+            <!-- Sprachen / Hilfe -->
         </div>
         <div class="small-3 columns">
             <a class="button button-red button-squash show-fade right" ng-show="!!state.next" ng-click="$state.go(state.next)">Weiter</a>
