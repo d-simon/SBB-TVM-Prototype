@@ -15,7 +15,7 @@
                         data: {
                             step: 0,
                             stop: true,
-                            back: true,
+                            back: 'root.main',
                             next: 'root.ticket.via'
                         }
                     });

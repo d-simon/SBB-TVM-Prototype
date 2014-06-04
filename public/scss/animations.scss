@@ -1,7 +1,7 @@
 // Scale
-.animate-scale[ui-view] {
+.animate-scale {
 }
-.animate-scale[ui-view].ng-enter, .animate-scale[ui-view].ng-leave {
+.animate-scale.ng-enter, .animate-scale.ng-leave {
     position: absolute;
     left: 0;
     right: 0;
@@ -10,60 +10,85 @@
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
-.animate-scale[ui-view].ng-enter {
+.animate-scale.ng-enter {
     opacity: 0;
     -webkit-transform:scale3d(0.5, 0.5, 0.5);
     -moz-transform:scale3d(0.5, 0.5, 0.5);
     transform:scale3d(0.5, 0.5, 0.5);
 }
-.animate-scale[ui-view].ng-enter-active {
+.animate-scale.ng-enter-active {
     opacity: 1;
     -webkit-transform:scale3d(1, 1, 1);
     -moz-transform:scale3d(1, 1, 1);
     transform:scale3d(1, 1, 1);
 }
-.animate-scale[ui-view].ng-leave {
+.animate-scale.ng-leave {
     opacity: 1;
     -webkit-transform:scale3d(1, 1, 1);
     -moz-transform:scale3d(1, 1, 1);
     transform:scale3d(1, 1, 1);
 }
-.animate-scale[ui-view].ng-leave-active {
+.animate-scale.ng-leave-active {
     opacity: 0;
     -webkit-transform:scale3d(0.5, 0.5, 0.5);
     -moz-transform:scale3d(0.5, 0.5, 0.5);
     transform:scale3d(0.5, 0.5, 0.5);
+}
+
+// Fade
+.animate-fade {
+}
+.animate-fade.ng-enter, .animate-fade.ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+.animate-fade.ng-enter {
+    opacity: 0;
+}
+.animate-fade.ng-enter-active {
+    opacity: 1;
+}
+.animate-fade.ng-leave {
+    opacity: 1;
+}
+.animate-fade.ng-leave-active {
+    opacity: 0;
 }
 
 
 // Right
 
-.animate-in[ui-view].ng-enter, .animate-in[ui-view].ng-leave {
+.animate-in.ng-enter, .animate-in.ng-leave {
     position: absolute;
     -webkit-transition:all .5s ease-in-out;
     -moz-transition:all .5s ease-in-out;
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
-.animate-in[ui-view].ng-enter {
+.animate-in.ng-enter {
     opacity: 0;
     -webkit-transform:translate3d(0, 1024px, 0);
     -moz-transform:translate3d(0, 1024px, 0);
     transform:translate3d(0, 1024px, 0);
 }
-.animate-in[ui-view].ng-enter-active {
+.animate-in.ng-enter-active {
     opacity: 1;
     -webkit-transform:translate3d(0, 0, 0);
     -moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0);
 }
-.animate-in[ui-view].ng-leave {
+.animate-in.ng-leave {
     opacity: 1;
     -webkit-transform:translate3d(0, 0, 0);
     -moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0);
 }
-.animate-in[ui-view].ng-leave-active {
+.animate-in.ng-leave-active {
     opacity: 0;
     -webkit-transform:translate3d(0, -1024px, 0);
     -moz-transform:translate3d(0, -1024px, 0);
@@ -73,32 +98,32 @@
 
 
 
-.animate-back[ui-view].ng-enter, .animate-back[ui-view].ng-leave {
+.animate-back.ng-enter, .animate-back.ng-leave {
     position: absolute;
     -webkit-transition:all .5s ease-in-out;
     -moz-transition:all .5s ease-in-out;
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
-.animate-back[ui-view].ng-enter {
+.animate-back.ng-enter {
     opacity: 0;
     -webkit-transform:translate3d(0, -1024px, 0);
     -moz-transform:translate3d(0, -1024px, 0);
     transform:translate3d(0, -1024px, 0);
 }
-.animate-back[ui-view].ng-enter-active {
+.animate-back.ng-enter-active {
     opacity: 1;
     -webkit-transform:translate3d(0, 0, 0);
     -moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0);
 }
-.animate-back[ui-view].ng-leave {
+.animate-back.ng-leave {
     opacity: 1;
     -webkit-transform:translate3d(0, 0, 0);
     -moz-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0);
 }
-.animate-back[ui-view].ng-leave-active {
+.animate-back.ng-leave-active {
     opacity: 0;
     -webkit-transform:translate3d(0, 1024px, 0);
     -moz-transform:translate3d(0, 1024px, 0);
