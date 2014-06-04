@@ -27,6 +27,10 @@ li {
     bottom:0;
  }
 
+.key {
+	min-width: 18px;
+}
+
 #keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 
 #keyboardHeader {position:relative;}
@@ -40,8 +44,8 @@ li {
 td {
 	padding-top: 16px !important;
 	padding-bottom: 16px !important;
-	padding-left: 28px !important;
-	padding-right: 28px !important;
+	padding-left: 27px !important;
+	padding-right: 27px !important;
 }
 
 table, tr, .jsKeyboardRow {
@@ -50,9 +54,13 @@ table, tr, .jsKeyboardRow {
 }
 
 .button-a {
-	margin-left: 110px;
+	margin-left: 120px;
 }
 
 .button-q {
-	margin-left: 60px;
+	margin-left: 70px;
+}
+
+.button-key-Stop {
+	margin-left: 10px;
 }
