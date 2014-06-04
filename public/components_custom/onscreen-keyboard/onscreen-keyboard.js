@@ -83,13 +83,16 @@ var jsKeyboard = {
     updateCursor: function (input) {
         //input cursor focus and position during typing
         jsKeyboard.currentElement.setCursorPosition(jsKeyboard.currentElementCursorPosition);
-        if (updateCallback && typeof updateCallback == 'function') { updateCallback(input) };
+        jsKeyboard.updateCallback(input);
     },
     write: function (m) {
         var a = jsKeyboard.currentElement.val(),
             b = String.fromCharCode(m),
             pos = jsKeyboard.currentElementCursorPosition,
             output = [a.slice(0, pos), b, a.slice(pos)].join('');
+
+        $('#onscreen-keyboard').trigger("onScreenKeyPressed", b);
+
         jsKeyboard.currentElement.val(output);
         jsKeyboard.currentElementCursorPosition++; //+1 cursor
         jsKeyboard.updateCursor(output);
@@ -108,8 +111,11 @@ var jsKeyboard = {
     },
     enter: function () {
         var t = jsKeyboard.currentElement.val();
-        jsKeyboard.currentElement.val(t + "\n");
+        //jsKeyboard.currentElement.val(t + "\n");
         // jsKeyboard.updateCursor();
+        jsKeyboard.enterCallback();
+        $('#onscreen-keyboard').trigger("onScreenKeyPressed", "enter");
+
     },
     space: function () {
         var a = jsKeyboard.currentElement.val(),
@@ -153,28 +159,29 @@ var jsKeyboard = {
                { value: "Leerzeichen", isChar: "false", buttonClass: "button", onclick: "jsKeyboard.space();", keyClass: "key key_space" } 
                ]
            ]
+    },
+    autocomplete: function (input) {
+        $.ajax("http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&REQ0JourneyStopsS0A=1&getstop=1&noSession=yes&REQ0JourneyStopsB=10&REQ0JourneyStopsS0G=" + input + "&js=true&" )
+        .done(function(msg) {
+            //console.log(msg);
+            var suggs = JSON.parse(msg.replace(';SLs.showSuggestion();','').replace('SLs.sls=',''));
+            for (var i = 1; i < suggs.suggestions.length; i++) {
+                 console.log(suggs.suggestions[i].value);
+            };
+        })
+        .fail(function() {
+            console.log( "Error: Can't load suggetions from SBB Ajax Request" );
+        });
+
+        console.log("eingabe " + input );
+    },
+    updateCallback: function (input) {
+        jsKeyboard.autocomplete(input);
+    },
+    enterCallback: function () {
+        $("#keyboard").parent().fadeOut();
     }
-}
-
-function autocomplete (input) {
-    $.ajax("http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&REQ0JourneyStopsS0A=1&getstop=1&noSession=yes&REQ0JourneyStopsB=10&REQ0JourneyStopsS0G=" + input + "&js=true&" )
-    .done(function(msg) {
-        //console.log(msg);
-        var suggs = JSON.parse(msg.replace(';SLs.showSuggestion();','').replace('SLs.sls=',''));
-        for (var i = 1; i < suggs.suggestions.length; i++) {
-             console.log(suggs.suggestions[i].value);
-        };
-    })
-    .fail(function() {
-        console.log( "Error: Can't load suggetions from SBB Ajax Request" );
-    });
-
-    console.log("eingabe " + input );
-}
-
-function updateCallback (input) {
-    autocomplete(input);
-}
+};
 
 // GET CURSOR POSITION
 jQuery.fn.getCursorPosition = function(){

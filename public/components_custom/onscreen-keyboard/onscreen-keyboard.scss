@@ -22,7 +22,9 @@ li {
  }
 
 #onscreen-keyboard {
+    position:absolute;
  	width: 1024px;
+    bottom:0;
  }
 
 #keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
@@ -31,7 +33,7 @@ li {
 #keyboardHeader div {color:#fff; padding:3px; padding-left:10px; padding-right:10px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
 
 #onscreen-keyboard {
-	position:absolute; 
+	position:absolute;
 	background-color: rgba(0, 0, 0, 0.8);
 }
 

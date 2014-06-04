@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('onscreen-keyboard', [])
-        .directive('keyboard', [function () {
+        .directive('keyboard', ['$rootScope', function ($rootScope) {
                 return function($scope, $element, $attrs) {
 
                     // Create Keyboard if we don't already have one
@@ -14,7 +14,7 @@
                     var $onscreenKeyboard = $('#onscreen-keyboard');
 
                     jsKeyboard.init('onscreen-keyboard');
-                    $onscreenKeyboard.fadeIn();
+                    $onscreenKeyboard.fadeOut();
 
                     var $inputField = $($element);
                     jsKeyboard.currentElement = $inputField;
@@ -23,9 +23,14 @@
                     $inputField.on('focus, click', function (e) {
                         jsKeyboard.currentElement = $(this);
                         jsKeyboard.currentElementCursorPosition = $(this).val().length;
-                        jsKeyboard.show();
                         $onscreenKeyboard.fadeIn();
                     });
+
+                    $onscreenKeyboard.on('onScreenKeyPressed', function () {
+                        if (jsKeyboard.currentElement == $(this)) {
+                            console.log(arguments);
+                        }
+                    })
                 }
         }]);
 
