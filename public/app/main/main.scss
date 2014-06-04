@@ -61,39 +61,56 @@ footer.sbb-footer {
 .animate-split.ng-leave {
     position: absolute;
 }
+
 .animate-split.ng-enter {
     opacity: 0;
     .animate-split-left {
-        left: -512px;
+        -webkit-transform:translate3d(-512px, 0, 0);
+        -moz-transform:translate3d(-512px, 0, 0);
+        transform:translate3d(-512px, 0, 0);
     }
     .animate-split-right {
-        right: -512px;
+        -webkit-transform:translate3d(512px, 0, 0);
+        -moz-transform:translate3d(512px, 0, 0);
+        transform:translate3d(512px, 0, 0);
     }
 }
 .animate-split.ng-enter-active {
     opacity: 1;
     .animate-split-left {
-        left: 0;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
     }
     .animate-split-right {
-        right: 0;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
     }
 }
 .animate-split.ng-leave {
     opacity: 1;
     .animate-split-left {
-        left: 0;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
     }
     .animate-split-right {
-        right: 0;
+        -webkit-transform:translate3d(0, 0, 0);
+        -moz-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
     }
 }
 .animate-split.ng-leave-active {
     opacity: 0;
     .animate-split-left {
-        left: -512px;
+        -webkit-transform:translate3d(-512px, 0, 0);
+        -moz-transform:translate3d(-512px, 0, 0);
+        transform:translate3d(-512px, 0, 0);
     }
     .animate-split-right {
-        right: -512px;
+        -webkit-transform:translate3d(512px, 0, 0);
+        -moz-transform:translate3d(512px, 0, 0);
+        transform:translate3d(512px, 0, 0);
     }
 }

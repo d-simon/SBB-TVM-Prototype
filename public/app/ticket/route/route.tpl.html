@@ -1,16 +1,20 @@
 <div class="button-group">
-    <li>
+    <li class="small-9">
         <div keyboard>
-            <input class="button" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.from.text" readonly="true" />
+            <input class="button expand" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.from.text" readonly="true" />
         </div>
     </li>
-    <li><div class="button button-red">ändern</div></li>
+    <li class="small-3">
+        <div class="button button-red">ändern</div>
+    </li>
 </div>
 <div class="button-group">
-    <li>
+    <li class="small-9">
         <div keyboard>
-            <input class="button" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.to.text" readonly="true" />
+            <input class="button expand" ng-class="{'button-inactive': isActive == true}" ng-model="ticket.to.text" placeholder="…" readonly="true" />
         </div>
     </li>
-    <li><div class="button button-red">ändern</div></li>
+    <li class="small-3">
+        <div class="button button-red">ändern</div>
+    </li>
 </div>
