@@ -18,6 +18,7 @@
   "homepage": "https://github.com/d-simon/SFF-TVM-Prototype",
   "devDependencies": {
     "grunt": ">=0.4.1",
+    "grunt-connect-proxy": "^0.1.10",
     "grunt-contrib-connect": ">=0.2.0",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-watch": "^0.6.1",

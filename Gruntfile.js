@@ -8,9 +8,26 @@ module.exports = function (grunt) {
                 options: {
                     base: 'public',
                     hostname: '0.0.0.0',
-                    port: 9001
-                }
-            }
+                    port: 9001,
+                    middleware: function (connect, options) {
+                        var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
+                        return [
+                            // Include the proxy first
+                            proxy,
+                            // Serve static files.
+                            connect.static('public')
+                            // Make empty directories browsable.
+                           // connect.directory(options.base)
+                        ];
+                    }
+                },
+                proxies: [
+                    {
+                        context: '/bin',
+                        host: 'fahrplan.sbb.ch'
+                    }
+                ]
+            },
         },
         watch: {
             scss: {
@@ -42,7 +59,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('local', ['server:local']);
     grunt.registerTask('server', ['server:local']);
-    grunt.registerTask('server:local', ['sass', 'connect:local', 'watch']);
+    grunt.registerTask('server:local', ['sass','configureProxies:local', 'connect:local', 'watch']);
 
     grunt.registerTask('default', ['local']);
 
