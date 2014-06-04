@@ -3,7 +3,10 @@
 
     angular.module('tvmProtoApp.ticket', [
             'tvmProtoApp.ticket.route',
-            'tvmProtoApp.ticket.via'
+            'tvmProtoApp.ticket.via',
+            'tvmProtoApp.ticket.options',
+            'tvmProtoApp.ticket.date',
+            'tvmProtoApp.ticket.pay'
         ])
         .config(['$stateProvider',
             function ($stateProvider) {
@@ -24,15 +27,15 @@
             }
         ])
         .controller('TicketCtrl', ['$scope', function ($scope) {
-            $scope.animateLeft = false;
+            $scope.animateBack = false;
             $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
                 if (fromState.data && typeof fromState.data.step != 'undefined' &&
                       toState.data &&   typeof toState.data.step != 'undefined' &&
                     toState.data.step > fromState.data.step)
                 {
-                    $scope.animateLeft = true;
+                    $scope.animateBack = false;
                 } else {
-                    $scope.animateLeft = false;
+                    $scope.animateBack = true;
                 }
             });
         }]);
