@@ -10,6 +10,9 @@
                         templateUrl: 'app/main/main.tpl.html',
                         controller: function ($state,$stateParams) {
                             console.log($state,$stateParams,$state.get());
+                        },
+                        data: {
+                            falgs: true
                         }
                     });
             }

@@ -5,18 +5,24 @@
         .controller('FooterCtrl' ,['$rootScope', '$scope', '$state',
             function ($rootScope, $scope, $state) {
                 $scope.defaultState = {
-                    step: 0,
-                    stop: false,
-                    next: false,
-                    back: false
+                    step:  0,
+                    stop:  false,
+                    next:  false,
+                    back:  false,
+                    help:  false,
+                    falgs: false
                 };
+
                 $scope.state = {};
-                $scope.state = angular.copy($scope.defaultState);
-                angular.extend($scope.state, $state.current.data);
+                createState($state.current.data);
+
+                function createState (data) {
+                    $scope.state = angular.copy($scope.defaultState);
+                    angular.extend($scope.state, data);
+                };
 
                 $rootScope.$on('$stateChangeSuccess', function (fromState, toState) {
-                    $scope.state = angular.copy($scope.defaultState);
-                    angular.extend($scope.state, toState.data);
+                    createState(toState.data);
                 });
 
             }
