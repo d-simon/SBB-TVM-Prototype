@@ -24,11 +24,12 @@
             }
         ])
         .controller('TicketCtrl', ['$scope', function ($scope) {
-            console.log($scope);
-            $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
-                if (   fromState.data && fromState.data.step &&
-                         toState.data && toState.data.step   &&
-                    toState.data.step > fromState.data.step) {
+            $scope.animateLeft = false;
+            $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
+                if (fromState.data && typeof fromState.data.step != 'undefined' &&
+                      toState.data &&   typeof toState.data.step != 'undefined' &&
+                    toState.data.step > fromState.data.step)
+                {
                     $scope.animateLeft = true;
                 } else {
                     $scope.animateLeft = false;
