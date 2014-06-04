@@ -28,10 +28,11 @@
                         }
                     },
                     date: {
-                        from: moment(),
-                        validfor: 7 // days? / moment + 7
+                        from: moment().calendar(),
+                        validfor: 7, // days? / moment + 7
+                        until: moment().add('days', 7).calendar()
                     },
-                    price: 0
+                    price: 43
                 };
 
                 var service = {};

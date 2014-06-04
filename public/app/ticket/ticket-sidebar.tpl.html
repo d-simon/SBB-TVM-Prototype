@@ -1,6 +1,23 @@
 
 <div class="ticket-sidebar--step">
-{{ticket.from.text}}
-{{ticket.to.text || '…'}}
-
+	{{ticket.price | currency:"CHF "}}
 </div>
+
+<div class="ticket-sidebar--step">
+	ab <span class="bold">{{ticket.date.from}}</span>
+	<br>
+	bis <span class="bold">{{ticket.date.until}}</span>
+</div>
+
+<div class="ticket-sidebar--step">
+	<span class="bold">{{ticket.options.tickets.full}}</span> x Regul&aumlr
+	<br>
+	<span class="bold">{{ticket.options.tickets.half}}</span> x Erm&aumlssigt
+</div>
+
+<div class="ticket-sidebar--step">
+	von <span class="bold">{{ticket.from.text}}</span>
+	<br>
+	nach <span class="bold">{{ticket.to.text || '…'}}</span>
+</div>
+
