@@ -16,8 +16,19 @@
     .config(['$urlRouterProvider', function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
     }])
-    .run([ 'amMoment', function (amMoment) {
+    .run(['$rootScope', 'amMoment', function ($rootScope, amMoment) {
         amMoment.changeLanguage('de');
+
+        $rootScope.safeApply = function (fn) {
+            var phase = this.$root.$$phase;
+            if (phase == '$apply' || phase == '$digest') {
+                if(fn && (typeof(fn) === 'function')) {
+                    fn();
+                }
+            } else {
+                this.$apply(fn);
+            }
+        };
     }]);
 
 }());

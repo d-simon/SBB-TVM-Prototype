@@ -13,21 +13,22 @@
         line-height: 1.4em;
         font-family: HelveticaNeue-Light;
         width:100%;
-        padding: 10px 20px;
+        padding: 0 20px;
 
         &:first-of-type {
             background: rgba(215,215,215,0.20);
             padding-top: 30px;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
+            hr.separator {
+                display:none
+            }
         }
     }
 }
 
-#border {
+hr.separator {
     border-top: 1px solid;
     border-top-color: rgba(255, 255, 255, 0.4);
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -43,4 +44,10 @@
 
 .ticket-highlight {
     font-family: HelveticaNeue-Medium;
+}
+
+
+.row.info-row {
+    width:96%;
+    margin-left:2%
 }
