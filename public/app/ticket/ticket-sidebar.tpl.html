@@ -67,7 +67,15 @@
         <div class="small-2 columns ticket-label-left">
         </div>
         <div class="small-9 right columns ticket-label-right">
-               hin / zurueck
+            {{ticket.options.klasse}}. Klasse
+        </div>
+    </div>
+    <div class="row info-row">
+        <div class="small-2 columns ticket-label-left">
+        </div>
+        <div class="small-9 right columns ticket-label-right">
+            <img ng-show="oneway" src="../media/icons/oneway_neg.svg" width="60px">
+            <img ng-show="!oneway" src="../media/icons/return_neg.svg" width="60px">
         </div>
     </div>
 </div>
