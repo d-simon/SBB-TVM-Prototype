@@ -12,10 +12,12 @@
     <li class="small-9">
         <div keyboard>
             <input class="button expand" ng-class="{'button-inactive': isactive }" ng-model="ticket.to.text" name="to" placeholder="…" readonly="true" />
-
         </div>
     </li>
     <li class="small-3">
         <div class="button button-red">ändern</div>
     </li>
+    <div sbb-autocomplete="ticket.to.text">
+        <div class="button" ng-repeat="suggestion in suggestions.suggestions">{{suggestion.value}}</div>
+    </div>
 </div>

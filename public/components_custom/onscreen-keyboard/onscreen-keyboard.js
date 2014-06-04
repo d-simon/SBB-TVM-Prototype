@@ -163,19 +163,19 @@ var jsKeyboard = {
            ]
     },
     autocomplete: function (input) {
-        $.ajax("http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&REQ0JourneyStopsS0A=1&getstop=1&noSession=yes&REQ0JourneyStopsB=10&REQ0JourneyStopsS0G=" + input + "&js=true&" )
-        .done(function(msg) {
-            //console.log(msg);
-            var suggs = JSON.parse(msg.replace(';SLs.showSuggestion();','').replace('SLs.sls=',''));
-            for (var i = 1; i < suggs.suggestions.length; i++) {
-                 console.log(suggs.suggestions[i].value);
-            };
-        })
-        .fail(function() {
-            console.log( "Error: Can't load suggetions from SBB Ajax Request" );
-        });
+        // $.ajax("http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&REQ0JourneyStopsS0A=1&getstop=1&noSession=yes&REQ0JourneyStopsB=10&REQ0JourneyStopsS0G=" + input + "&js=true&" )
+        // .done(function(msg) {
+        //     //console.log(msg);
+        //     var suggs = JSON.parse(msg.replace(';SLs.showSuggestion();','').replace('SLs.sls=',''));
+        //     for (var i = 1; i < suggs.suggestions.length; i++) {
+        //          console.log(suggs.suggestions[i].value);
+        //     };
+        // })
+        // .fail(function() {
+        //     console.log( "Error: Can't load suggetions from SBB Ajax Request" );
+        // });
 
-        console.log("eingabe " + input );
+        // console.log("eingabe " + input );
     },
     updateCallback: function (input) {
         jsKeyboard.autocomplete(input);

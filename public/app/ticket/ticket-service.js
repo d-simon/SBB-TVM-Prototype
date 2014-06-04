@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('tvmProtoApp.ticket')
-        .factory('TicketService', ['$http',
-            function ($http) {
+        .factory('TicketService', ['$http', '$q',
+            function ($http, $q) {
 
                 var defaultTicket = {
                     from: {
@@ -42,10 +42,21 @@
                 service.ticket = angular.copy(defaultTicket);
 
                 service.getJourneyStop = function (suggestion) {
-                    return $http.get('http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&tpl=suggest2json&encoding=utf-8&REQ0JourneyStopsS0A=7&getstop=1&noSession=yes&REQ0JourneyStopsB=10&' + 
+                    var deferred = $q.defer();
+
+                    $http.get('http://www.corsproxy.com/fahrplan.sbb.ch/bin/ajax-getstop.exe/dny?start=1&tpl=suggest2json&encoding=utf-8&REQ0JourneyStopsS0A=7&getstop=1&noSession=yes&REQ0JourneyStopsB=10&' + 
                                      'REQ0JourneyStopsS0G=' +
                                       suggestion +
-                                     '&js=true&');
+                                     '&js=true&')
+                        .success(function (result) {
+                            var suggestions = JSON.parse(result.replace(';SLs.showSuggestion();','').replace('SLs.sls=',''));
+                            deferred.resolve(suggestions);
+                        })
+                        .error(function (data, status) {
+                            deffered.reject(data);
+                        });
+
+                    return deferred.promise;
                 };
                 service.resetTicket = function () {
                     service.ticket = angular.copy(defaultTicket);
