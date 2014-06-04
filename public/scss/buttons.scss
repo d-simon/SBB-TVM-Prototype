@@ -90,24 +90,24 @@ input.button {
     text-transform: uppercase;
 }
 
-.language-flag {
+.flag-language {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 57px;
-    width: 80px;    
+    width: 80px;
 }
 
-#france {
+.flag-france {
     background-image: url("../media/icons/country/france.svg");
 }
-#uk {
+.flag-uk {
     background-image: url("../media/icons/country/uk.svg");
 }
-#italy {
+.flag-italy {
     background-image: url("../media/icons/country/italy.svg");
 }
-#world {
+.flag-world {
     background-image: url("../media/icons/country/world_map.svg");
     background-color: #e7e7e7;
 }
