@@ -47,3 +47,12 @@ header.sbb-header {
         @extend .text-shadow;
     }
 }
+
+footer.sbb-footer {
+    width: $screenWidth;
+    height:64px;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(86,98,115,0.90);
+}
