@@ -4,20 +4,20 @@
     angular.module('onscreen-keyboard', [])
         .directive('keyboard', ['$rootScope', function ($rootScope) {
             return {
-                scope: {},
+                scope: true,
                 link: function($scope, $element, $attrs) {
 
                     // Create Keyboard if we don't already have one
                     if (!$('#onscreen-keyboard').length) {
                         $('main').append('<div id="onscreen-keyboard"></div>');
                     }
-
+                    console.log($scope)
                     // Setup
                     var $onscreenKeyboard = $('#onscreen-keyboard');
 
                     jsKeyboard.init('onscreen-keyboard');
                     $onscreenKeyboard.hide();
-                    $scope.isActive = false;
+                    $scope.isactive = false;
 
                     var $inputField = $($element).find('input');
                     jsKeyboard.currentElement = $inputField;
@@ -28,7 +28,7 @@
                         jsKeyboard.currentElement = $(this);
                         jsKeyboard.currentElementCursorPosition = $(this).val().length;
                         $onscreenKeyboard.fadeIn();
-                        $scope.isActive = true;
+                        $scope.isactive = true;
                     });
 
                     $onscreenKeyboard.on('onScreenKeyPressed', function (event, key) {
@@ -37,7 +37,7 @@
                         }, 30);
 
                         if (key === 'enter') {
-                            $scope.isActive = false;
+                            $scope.isactive = false;
                         }
                     });
                 }
