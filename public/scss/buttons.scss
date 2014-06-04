@@ -90,20 +90,24 @@ input.button {
     text-transform: uppercase;
 }
 
+.language-flag {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 57px;
+    width: 80px;    
+}
+
 #france {
     background-image: url("../media/icons/country/france.svg");
-    background-repeat: no-repeat;
 }
 #uk {
     background-image: url("../media/icons/country/uk.svg");
-    background-repeat: no-repeat;
 }
 #italy {
     background-image: url("../media/icons/country/italy.svg");
-    background-repeat: no-repeat;
 }
 #world {
     background-image: url("../media/icons/country/world_map.svg");
     background-color: #e7e7e7;
-    background-repeat: no-repeat;
 }
