@@ -19,7 +19,7 @@
                     $onscreenKeyboard.hide();
                     $scope.isActive = false;
 
-                    var $inputField = $($element);
+                    var $inputField = $($element).find('input');
                     jsKeyboard.currentElement = $inputField;
                     jsKeyboard.currentElementCursorPosition = $inputField.val().length;
 
