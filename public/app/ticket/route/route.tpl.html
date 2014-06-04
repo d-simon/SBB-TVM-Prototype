@@ -1,23 +1,32 @@
-<div class="button-group">
+<ul class="button-group">
     <li class="small-9">
         <div keyboard>
-            <input class="button expand" ng-class="{'button-inactive': isactive }" ng-model="ticket.from.text" name="from" readonly="true" />
+            <input class="button expand" ng-class="{'button-inactive': isactive }" ng-model="ticket.from.text" id="ticket-from" name="ticket-from" readonly="true" />
         </div>
     </li>
     <li class="small-3">
-        <div class="button button-red">ändern</div>
+        <label class="button button-red">ändern</label>
     </li>
+</ul>
+<!--  quick & dirty :(  -->
+<div style="position:relative">
+    <div class="autosuggest-container" sbb-autocomplete="ticket.from.text" sbb-autocomplete-callback="doneSelecting">
+        <div class="button button-autosuggest expand" ng-repeat="suggestion in suggestions" ng-click="select(suggestion.value)">{{suggestion.value}}</div>
+    </div>
 </div>
-<div class="button-group">
+<ul class="button-group">
     <li class="small-9">
         <div keyboard>
-            <input class="button expand" ng-class="{'button-inactive': isactive }" ng-model="ticket.to.text" name="to" placeholder="…" readonly="true" />
+            <input class="button expand" ng-class="{'button-inactive': isactive }" ng-model="ticket.to.text" id="ticket-to" name="ticket-to" placeholder="…" readonly="true" />
         </div>
     </li>
     <li class="small-3">
         <div class="button button-red">ändern</div>
     </li>
-    <div sbb-autocomplete="ticket.to.text">
-        <div class="button" ng-repeat="suggestion in suggestions.suggestions">{{suggestion.value}}</div>
+</ul>
+<!--  quick & dirty :(  -->
+<div style="position:relative">
+    <div class="autosuggest-container" sbb-autocomplete="ticket.to.text" sbb-autocomplete-callback="doneSelecting">
+        <div class="button button-autosuggest expand" ng-repeat="suggestion in suggestions" ng-click="select(suggestion.value)">{{suggestion.value}}</div>
     </div>
 </div>

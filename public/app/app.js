@@ -20,11 +20,11 @@
     .run(['$rootScope', '$state', 'amMoment', function ($rootScope, $state, amMoment) {
         amMoment.changeLanguage('de');
 
-        $rootScope.safeApply = function (fn) {
+        $rootScope.$safeApply = function (fn) {
             var phase = this.$root.$$phase;
             if (phase == '$apply' || phase == '$digest') {
                 if(fn && (typeof(fn) === 'function')) {
-                    fn();
+                    fn(this);
                 }
             } else {
                 this.$apply(fn);

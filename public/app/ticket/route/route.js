@@ -25,11 +25,15 @@
         ])
         .controller('TicketRouteCtrl', ['$scope',
             function ($scope) {
-                console.log($scope.ticket.to.selected)
+
+                $scope.doneSelecting = function () {
+                    $('#onscreen-keyboard').trigger('onScreenKeyPressed', 'enter');
+                };
+
                 if ($scope.ticket.from.selected !== true) {
-                    setTimeout(function() { $('input[name=from]').click(); }, 0);
+                    setTimeout(function() { $('input[name=ticket-from]').click(); }, 0);
                 } else if ($scope.ticket.to.text.length <= 0)  {
-                    setTimeout(function() { $('input[name=to]').click(); }, 0);
+                    setTimeout(function() { $('input[name=ticket-to]').click(); }, 0);
                 }
             }
         ]);
