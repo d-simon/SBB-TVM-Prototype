@@ -21,12 +21,12 @@ var jsKeyboard = {
 
         jsKeyboard.addKeyDownEvent();
 
-        jsKeyboard.show();
-        $(':input').not('[type="reset"]').not('[type="submit"]').on('focus, click', function (e) {
-            jsKeyboard.currentElement = $(this);
-            jsKeyboard.currentElementCursorPosition = $(this).getCursorPosition();
-            // console.log('keyboard is now focused on ' + jsKeyboard.currentElement.attr('name') + ' at pos(' + jsKeyboard.currentElementCursorPosition + ')');
-        });
+        //jsKeyboard.show();
+        // $(':input').not('[type="reset"]').not('[type="submit"]').on('focus, click', function (e) {
+        //     jsKeyboard.currentElement = $(this);
+        //     jsKeyboard.currentElementCursorPosition = $(this).getCursorPosition();
+        //     // console.log('keyboard is now focused on ' + jsKeyboard.currentElement.attr('name') + ' at pos(' + jsKeyboard.currentElementCursorPosition + ')');
+        // });
     },
     focus: function (t) {
         jsKeyboard.currentElement = $(t);
@@ -130,10 +130,10 @@ var jsKeyboard = {
         jsKeyboard.updateCursor(output);
     },
     show: function () {
-        $("#keyboard").animate({ "bottom": "0" }, "slow", function () { });
+        $("#keyboard").animate({ "bottom": "0", "opacity": "1"}, "slow", function () { });
     },
     hide: function () {
-        $("#keyboard").animate({ "bottom": "-350px" }, "slow", function () { });
+        $("#keyboard").animate({ "bottom": "-350px", "opacity": "0" }, "slow", function () { });
     },
     defaultKeyboard: {
         capitalLetter:

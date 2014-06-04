@@ -21,7 +21,7 @@ li {
     // text-align: center;
  }
 
- #virtualKeyboard {
+#onscreen-keyboard {
  	width: 1024px;
  }
 
@@ -30,7 +30,7 @@ li {
 #keyboardHeader {position:relative;}
 #keyboardHeader div {color:#fff; padding:3px; padding-left:10px; padding-right:10px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
 
-#virtualKeyboard {
+#onscreen-keyboard {
 	position:absolute; 
 	background-color: rgba(0, 0, 0, 0.8);
 }

@@ -7,6 +7,7 @@
 
         'common',
         'angularMoment',
+        'onscreen-keyboard',
 
         'tvmProtoApp.root',
         'tvmProtoApp.main',
