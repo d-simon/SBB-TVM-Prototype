@@ -151,16 +151,18 @@ var jsKeyboard = {
         // 1st row
                [{value: 81, buttonClass: "button button-q"}, { value: 87 }, { value: 69 }, { value: 82 }, { value: 84 }, { value: 90 },
                { value: 85 }, { value: 73 }, { value: 79 }, { value: 80 },
-               { value: "L&oumlschen", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button", keyClass: "key key_del" }],
+               { value: "&nbsp;", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button", keyClass: "key keyboard-icon key-delete" }],
         // 2nd row
-               [{value: 65, buttonClass: "button button-a"}, { value: 83 }, { value: 68 }, { value: 70 },
-               { value: 71 }, { value: 72 }, { value: 74 }, { value: 75 }, { value: 76 }, { value: "Best&aumltigen", isChar: "false", buttonClass: "button button-red", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" }
+               [{ value: "?", isChar: "false", buttonClass: "button button-blue", onclick: "jsKeyboard.enter();", keyClass: "key key-help" },
+               {value: 65, buttonClass: "button button-a"}, { value: 83 }, { value: 68 }, { value: 70 },
+               { value: 71 }, { value: 72 }, { value: 74 }, { value: 75 }, { value: 76 }, 
+               { value: "Best&aumltigen", isChar: "false", buttonClass: "button button-red", onclick: "jsKeyboard.enter();", keyClass: "key key-enter" } 
                ],
         // 3rd row
-               [{ value: "Stop", isChar: "false", buttonClass: "button button-red", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
-               { value: "Hilfe", isChar: "false", buttonClass: "button button-blue", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
+               [{ value: "Stop", isChar: "false", buttonClass: "button button-red", onclick: "jsKeyboard.enter();", keyClass: "key key-stop" },
+               // { value: "Zurück", isChar: "false", buttonClass: "button button-blue", onclick: "jsKeyboard.enter();", keyClass: "key key-back" },
                { value: 89 }, { value: 88 }, { value: 67 }, { value: 86 }, { value: 66 }, { value: 78 }, { value: 77 },
-               { value: "Leerzeichen", isChar: "false", buttonClass: "button", onclick: "jsKeyboard.space();", keyClass: "key key_space" } 
+               { value: "&nbsp;", isChar: "false", buttonClass: "button", onclick: "jsKeyboard.space();", keyClass: "key keyboard-icon key-space" }
                ]
            ]
     },
