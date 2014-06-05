@@ -11,15 +11,15 @@
                     if (!$('#onscreen-keyboard').length) {
                         $('main').append('<div id="onscreen-keyboard"></div>');
                     }
-                    console.log($scope)
+
                     // Setup
                     var $onscreenKeyboard = $('#onscreen-keyboard');
-
                     jsKeyboard.init('onscreen-keyboard');
                     $onscreenKeyboard.hide();
                     $scope.isactive = false;
 
-                    var $inputField = $($element).find('input');
+                    // Find Input Field
+                    var $inputField = $($element).find('input').first();
                     jsKeyboard.currentElement = $inputField;
                     jsKeyboard.currentElementCursorPosition = $inputField.val().length;
 
@@ -27,7 +27,7 @@
                         $onscreenKeyboard.trigger('onScreenKeyPressed', 'enter');
                         jsKeyboard.currentElement = $(this);
                         jsKeyboard.currentElementCursorPosition = $(this).val().length;
-                        $onscreenKeyboard.fadeIn();
+                        $onscreenKeyboard.slideDown();
                         $scope.isactive = true;
                     });
 
@@ -38,7 +38,7 @@
 
                         if (key === 'enter') {
                             $scope.isactive = false;
-                            $onscreenKeyboard.fadeOut();
+                            $onscreenKeyboard.slideUp();
                         }
                     });
                 }

@@ -185,7 +185,7 @@ var jsKeyboard = {
         jsKeyboard.autocomplete(input);
     },
     enterCallback: function () {
-        $("#keyboard").parent().fadeOut();
+        $("#keyboard").parent().slideUp();
     }
 };
 
