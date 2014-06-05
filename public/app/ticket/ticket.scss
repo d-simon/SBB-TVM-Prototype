@@ -62,3 +62,44 @@ hr.separator {
     width:96%;
     margin-left:2%
 }
+
+.options-icon {
+    padding: 0 1em;
+    display: inline-block;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.options-halfprice {
+    background-image: url(../media/icons/half_price_pos.png);
+}
+
+.options-halfprice-neg {
+    background-image: url(../media/icons/half_price_neg.png);
+}
+
+.options-fullprice {
+    background-image: url(../media/icons/full_price_pos.png);
+}
+
+.options-fullprice-neg {
+    background-image: url(../media/icons/full_price_neg.png);
+}
+
+.options-oneway {
+    background-image: url(../media/icons/oneway_pos.png);
+}
+
+.options-oneway-neg {
+    background-image: url(../media/icons/oneway_neg.png);
+}
+
+.options-return {
+    background-image: url(../media/icons/return_pos.png);
+}
+
+.options-return-neg {
+    background-image: url(../media/icons/return_neg.png);
+}
