@@ -7,7 +7,7 @@
 
                 var defaultTicket = {
                     from: {
-                        text: 'ZÜRICH HB',
+                        text: 'Zürich HB',
                         selected: true
                     },
                     to: {
