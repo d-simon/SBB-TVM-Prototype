@@ -13,8 +13,7 @@ li {
 
 #keyboardCapitalLetter {
 	border: 0px;
-    margin-top: 0.625rem;
-    margin-bottom: 0.625rem;
+    margin: 0.625rem auto 0.5rem;
 }
 
 #keyboard{
@@ -31,7 +30,7 @@ li {
  }
 
 .key {
-	min-width: 18px;
+	min-width: 20px;
 }
 
 #keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
@@ -72,13 +71,13 @@ table, tr, .jsKeyboardRow {
 }
 
 .key-stop {
-	width: 67px;
+	width: 78px;
 }
 
 .key-enter {
 }
 .key-help {
-	width: 29px;
+	width: 35px;
 }
 
 .key-delete {
