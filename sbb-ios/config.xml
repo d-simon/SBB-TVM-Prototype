@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
-        version   = "1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        id="ch.sbb-tvm-prototype.sbb-app"
+        version="1.0.0">
 
     <name>SFF TVM Prototype</name>
 
@@ -12,9 +12,11 @@
         A functional prototype of the redesigned Swiss Federal Railways TVM.
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        Marco Ehrenmann (marcoe@me.com)
+    <author href="http://zhdk.ch" email="*">
+        Marco Ehrenmann
     </author>
+
+    <gap:platform name="ios" />
 
     <!--
         Enable individual API permissions here.
@@ -31,9 +33,9 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
-    <preference name="orientation"                value="landscape" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="Orientation"                value="landscape" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="tablet" />      <!-- all: possible values handset, tablet, or universal -->
-    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="Fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="false" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
     <preference name="stay-in-webview"            value="true" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
@@ -46,14 +48,27 @@
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
+    <preference name="DisallowOverscroll" value="true" />
+
+    <preference name="webviewbounce" value="false" />
     <!-- Plugins can also be added here. -->
+    
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <gap:config-file platform="ios" parent="UIStatusBarHidden">
+        <true/>
+    </gap:config-file>
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+        <false/>
+    </gap:config-file>
+
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
 
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+<!--     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
@@ -67,9 +82,9 @@
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
-
+-->
     <!-- Define app splash screen for each platform. -->
-    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
+<!--     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
@@ -78,7 +93,7 @@
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios"     width="640" height="960" />
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
-    <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
+    <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" /> -->
 
     <!--
         Define access to external domains.
@@ -88,20 +103,16 @@
 
         Otherwise, you can specify specific domains:
     -->
-    <access origin="http://127.0.0.1*"/> <!-- allow local pages -->
+    <access origin="*" />
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
         <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
     -->
-    
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-    <gap:config-file platform="ios" parent="UIStatusBarHidden">
-        <true/>
-    </gap:config-file>
-    
-    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
-        <false/>
-    </gap:config-file>
+
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
 
 </widget>
