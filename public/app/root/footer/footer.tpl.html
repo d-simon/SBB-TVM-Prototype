@@ -4,11 +4,12 @@
             <a class="button button-red button-squash show-fade" ng-show="state.stop" ng-click="$state.go('root.main')">Stop</a>
             <a class="button button-blue button-squash show-fade" ng-show="!!state.back" ng-click="$state.go(state.back)">Zurück</a>
         </div>
-        <div class="small-9 right columns" ng-show="state.flags">
+        <div class="small-12 right columns" ng-show="state.flags">
             <!-- <div class="button button-squash button-outline">Italiano</div>
             <div class="button button-squash button-outline">English</div>
             <div class="button button-squash button-outline">Français</div> -->
             <!-- <div class="button button-squash button-outline">&nbsp;</div> -->
+            <a class="button button-blue button-squash show-fade">?</a>
             <div class="right flags-container">
                 <div class="button button-squash button-outline"> Willkommen </div>
                 <div class="button button-squash button-outline"> Welcome </div>

@@ -1,21 +1,25 @@
+<h4>Anzahl Tickets</h4>
 <div class="button-group">
     <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full == 0}" ng-click="removeTicket('full')">-</a></li>
-    <li class="small-6"><a class="button expand">{{ticket.options.tickets.full}} x Regul&auml;r <span class="options-icon options-fullprice"></span></a></li>
-    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full >= 6}" ng-click="addTicket('full')">+</a></li>
+    <li class="small-6"><a class="button expand"><b>{{ticket.options.tickets.full}} x</b> Regul&auml;r <span class="options-icon options-fullprice"></span></a></li>
+    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full >= 6}" ng-click="addTicket('full')">+</a></li>
 </div>
 
 <div class="button-group">
-    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">-</a></li>
-    <li class="small-6"><a class="button expand">{{ticket.options.tickets.half}} x Erm&auml;ssigt <span class="options-icon options-halfprice"></span></a></li>
-    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
+    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">-</a></li>
+    <li class="small-6"><a class="button expand"><b>{{ticket.options.tickets.half}}</b> x Erm&auml;ssigt <span class="options-icon options-halfprice"></span></a></li>
+    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
 </div>
 <br><br>
+<h4>Fahrtoptionen</h4>
 <div class="button-group">
-    <li class="small-6"><a class="button expand" ng-class="{'button-inactive': ticket.options.klasse == 1}" ng-click="ticket.options.klasse = 1">1. Klasse</a></li>
-    <li class="small-6"><a class="button expand" ng-class="{'button-inactive': ticket.options.klasse == 2}" ng-click="ticket.options.klasse = 2">2. Klasse</a></li>
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticket.options.klasse == 1}" ng-click="ticket.options.klasse = 1">1. Klasse</a></li>
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticket.options.klasse == 2}" ng-click="ticket.options.klasse = 2">2. Klasse</a></li>
 </div>
 
 <div class="button-group">
-    <li class="small-6"><a class="button expand" ng-class="{'button-inactive': ticket.options.oneway}" ng-click="ticket.options.oneway = true"><span class="options-icon options-oneway"></span></a></li>
-    <li class="small-6"><a class="button expand" ng-class="{'button-inactive': !ticket.options.oneway}" ng-click="ticket.options.oneway = false"><span class="options-icon options-return"></span></a></li>
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticket.options.oneway}" ng-click="ticket.options.oneway = true"><span class="options-icon options-oneway"></span></a></li>
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': !ticket.options.oneway}" ng-click="ticket.options.oneway = false"><span class="options-icon options-return"></span></a></li>
 </div>
+
+
