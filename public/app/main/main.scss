@@ -14,17 +14,17 @@ main {
 
 
 header.sbb-header {
-    margin-top: 18px;
-    height:19px;
+    margin-top: 14px;
+    height:23px;
     background:url('../media/Logo_SBB_weiss_transparent.png') no-repeat;
     background-position: center right;
-    background-size:auto 19px;
+    background-size:auto 23px;
 
     span[clock] {
         text-align: center;
         display: block;
         width: 100%;
-        line-height: 19px;
+        line-height: 23px;
         @extend .text-shadow;
     }
 }
