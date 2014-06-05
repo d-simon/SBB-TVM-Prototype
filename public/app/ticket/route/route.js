@@ -30,10 +30,21 @@
                     $('#onscreen-keyboard').trigger('onScreenKeyPressed', 'enter');
                 };
 
+                $scope.clickTicket = function (val) {
+                    switch(val) {
+                        case 'to':
+                            $('input[name=ticket-to]').click();
+                            break;
+                        case 'from':
+                            $('input[name=ticket-from]').click();
+                            break;
+                    }
+                };
+
                 if ($scope.ticket.from.selected !== true) {
-                    setTimeout(function() { $('input[name=ticket-from]').click(); }, 0);
+                    setTimeout(function() { $scope.clickTicket('from'); }, 0);
                 } else if ($scope.ticket.to.text.length <= 0)  {
-                    setTimeout(function() { $('input[name=ticket-to]').click(); }, 0);
+                    setTimeout(function() { $scope.clickTicket('to'); }, 0);
                 }
             }
         ]);
