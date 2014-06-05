@@ -12,7 +12,6 @@
 
                     $scope.getSuggestions = function (term) {
                         ticketService.getJourneyStop(term).then(function (result) {
-                            console.log(result);
                             if (result.length && result[0].name.toLowerCase() != $scope.term.toLowerCase()) {
                                 $scope.suggestions = result;
                             } else {
@@ -31,7 +30,6 @@
                     };
 
                     $scope.$watch($attrs.sbbAutocomplete, function (value) {
-                        console.log('new value', value);
                         if ($scope.resetOnNextUpdate) {
                             $scope.resetOnNextUpdate = false;
                             $scope.suggestions = [];
