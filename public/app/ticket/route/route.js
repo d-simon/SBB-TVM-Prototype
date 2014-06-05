@@ -17,7 +17,15 @@
                             step: 0,
                             stop: true,
                             back: 'root.main',
-                            next: 'root.ticket.via',
+                            next: ['TicketService', function (ticketService) {
+                                var ticket = ticketService.ticket;
+
+                                if (ticket.to.text.length + ticket.from.text.length > 0) {
+                                    return 'root.ticket.via';
+                                } else {
+                                    return false;
+                                }
+                            }],
                             title: 'Reiseweg – Zielort wählen'
                         }
                     });
