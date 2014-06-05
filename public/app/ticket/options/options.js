@@ -16,7 +16,7 @@
                         data: {
                             step: 2,
                             back: 'root.ticket.via',
-                            next: 'root.ticket.date',
+                            next: function () { return 'root.ticket.date'; },
                             title: 'Anzahl Tickets / Extras'
                         }
                     });
