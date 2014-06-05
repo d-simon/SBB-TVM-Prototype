@@ -1,8 +1,8 @@
 <footer class="sbb-footer show-fade ng-hide-block" ng-class="{'transparent': stateSrv.state.flags}" ng-show="stateSrv.state.stop || !!stateSrv.state.back || !!stateSrv.state.next || stateSrv.state.flags || stateSrv.state.help">
     <nav class="row">
         <div class="small-4 columns">
-            <a class="button button-red button-squash show-fade" ng-show="stateSrv.state.stop" ng-click="$state.state.go('root.main')">Stop</a>
-            <a class="button button-blue button-squash show-fade" ng-show="!!stateSrv.state.back" ng-click="$state.state.go(stateSrv.state.back)">Zurück</a>
+            <a class="button button-red button-squash show-fade" ng-show="stateSrv.state.stop" ng-click="$state.go('root.main')">Stop</a>
+            <a class="button button-blue button-squash show-fade" ng-show="!!stateSrv.state.back" ng-click="$state.go(stateSrv.state.back)">Zurück</a>
         </div>
         <div class="small-12 right columns" ng-show="stateSrv.state.flags">
             <!-- <div class="button button-squash button-outline">Italiano</div>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="small-3 columns right">
-            <a class="button button-red button-squash show-fade right" ng-show="!!stateSrv.state.next" ng-click="$state.state.go(stateSrv.state.next)">Weiter</a>
+            <a class="button button-red button-squash show-fade right" ng-show="!!stateSrv.state.next" ng-click="$state.go(stateSrv.state.next)">Weiter</a>
         </div>
     </nav>
 </footer>
