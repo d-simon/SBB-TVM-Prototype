@@ -1,6 +1,6 @@
-<h4>{{ stepTitle || 'Ticket'}}</h4>
-
+<h4 class="ticket-sidebar--title">{{ stepTitle || 'Ticket'}}</h4>
 <div class="ticket-sidebar--step animate-h-scale ng-hide-block ng-hide-block" ng-show="step >= 4">
+<hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left ticket-highlight">
             CHF
@@ -88,6 +88,14 @@
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
             {{ticket.from.text}}
+        </div>
+    </div>
+    <div class="row info-row animate-h-scale ng-hide-block" ng-show="step >= 2">
+        <div class="small-2 columns ticket-label-left">
+            via
+        </div>
+        <div class="small-9 right columns ticket-label-right ticket-highlight">
+            direkt
         </div>
     </div>
     <div class="row info-row">
