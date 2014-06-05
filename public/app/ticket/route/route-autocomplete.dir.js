@@ -23,18 +23,22 @@
 
                     $scope.select = function (term) {
                         model.assign($scope, term);  // Assign a value to it
-                        $scope.$safeApply(function (self) {
-                            console.log('self',self);
-                            if (self[$attrs.sbbAutocompleteCallback] && typeof self[$attrs.sbbAutocompleteCallback] == 'function') {
-                                self[$attrs.sbbAutocompleteCallback](term);
-                            }
-                        });
+                        $scope.resetOnNextUpdate = true;
+                        $scope.suggestions = [];
+                        if ($scope[$attrs.sbbAutocompleteCallback] && typeof $scope[$attrs.sbbAutocompleteCallback] == 'function') {
+                            $scope[$attrs.sbbAutocompleteCallback](term);
+                        }
                     };
 
                     $scope.$watch($attrs.sbbAutocomplete, function (value) {
                         console.log('new value', value);
-                        $scope.term = value;
-                        $scope.getSuggestions((value || ""));
+                        if ($scope.resetOnNextUpdate) {
+                            $scope.resetOnNextUpdate = false;
+                            $scope.suggestions = [];
+                        } else {
+                            $scope.term = value;
+                            $scope.getSuggestions((value || ""));
+                        }
                     });
                 }
             };

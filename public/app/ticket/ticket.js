@@ -38,18 +38,23 @@
             $scope.step = $state.current.data.step || 0;
             // Animation
             $scope.animateBack = false;
-            $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState) {
-                if (fromState.data && typeof fromState.data.step != 'undefined' &&
-                      toState.data && typeof   toState.data.step != 'undefined' &&
-                    toState.data.step > fromState.data.step)
+            $scope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
+                if (fromState &&
+                    toState &&
+                    fromState.data && typeof fromState.data.step != 'undefined' &&
+                    toState.data && typeof   toState.data.step != 'undefined' &&
+                    toState.data.step <= fromState.data.step
+                    )
                 {
-                    $scope.animateBack = false;
-                } else {
                     $scope.animateBack = true;
+                } else {
+                    $scope.animateBack = false;
                 }
+            });
+            $scope.$on('$stateChangeSuccess', function (event, toState) {
                 $scope.stepTitle = toState.data.title || false;
                 $scope.step = $state.current.data.step || $scope.step;
-            });
+            })
         }]);
 
 }());

@@ -38,6 +38,7 @@
 
                         if (key === 'enter') {
                             $scope.isactive = false;
+                            $onscreenKeyboard.fadeOut();
                         }
                     });
                 }
