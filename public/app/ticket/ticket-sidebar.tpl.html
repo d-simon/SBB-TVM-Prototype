@@ -46,8 +46,8 @@
             {{ticket.options.tickets.full}} x
         </div>
         <div class="small-9 right columns ticket-label-right">
-            Regul&auml;r
-            <img src="../media/icons/full_price_neg.png" width="30px">
+            Regul&aumlr
+            <span class="options-icon options-fullprice-neg"></span>
         </div>
     </div>
     <div class="row info-row">
@@ -55,8 +55,8 @@
             {{ticket.options.tickets.half}} x
         </div>
         <div class="small-9 right columns ticket-label-right">
-            Erm&auml;ssigt
-            <img src="../media/icons/half_price_neg.png" width="30px">
+            Erm&aumlssigt
+            <span class="options-icon options-halfprice-neg"></span>
         </div>
     </div>
 </div>
@@ -74,8 +74,8 @@
         <div class="small-2 columns ticket-label-left">
         </div>
         <div class="small-9 right columns ticket-label-right">
-            <img ng-show="ticket.options.oneway" src="../media/icons/oneway_neg.png" width="60px">
-            <img ng-show="!ticket.options.oneway" src="../media/icons/return_neg.png" width="60px">
+            <span ng-show="ticket.options.oneway" class="options-icon options-oneway-neg"></span>
+            <span ng-show="!ticket.options.oneway" class="options-icon options-return-neg"></span>
         </div>
     </div>
 </div>
