@@ -43,13 +43,6 @@
 
                 service.getJourneyStop = function (suggestion) {
                     var deferred = $q.defer();
-                    var localhost = '//' + window.location.host,
-                        onlinehost = 'http://www.corsproxy.com/fahrplan.sbb.ch';
-
-                    // $http.get(onlinehost + '/bin/ajax-getstop.exe/dny?start=1&tpl=suggest2json&encoding=utf-8&REQ0JourneyStopsS0A=7&getstop=1&noSession=yes&REQ0JourneyStopsB=5&' + 
-                    //                  'REQ0JourneyStopsS0G=' +
-                    //                   suggestion +
-                    //                  '&js=true&')
                         $http.get('http://transport.opendata.ch/v1/locations?query=' + suggestion)
                         .success(function (result) {
                             //var suggestions = JSON.parse(result);
