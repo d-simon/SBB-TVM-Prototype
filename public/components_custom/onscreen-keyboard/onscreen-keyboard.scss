@@ -20,7 +20,7 @@ li {
 #keyboard{
     margin: 0 auto;
     display:block;
-    // text-align: center;
+   	text-align: right;
  }
 
 #onscreen-keyboard {
@@ -56,14 +56,41 @@ table, tr, .jsKeyboardRow {
 	background-color: rgba(0, 0, 0, 0.0) !important;
 }
 
+.keyboard-icon {
+    padding: 0 1em;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+	line-height: 1;
+}
+
 .button-a {
-	margin-left: 120px;
 }
 
 .button-q {
 	margin-left: 70px;
 }
 
-.button-key-Stop {
-	margin-left: 10px;
+.key-stop {
+	width: 67px;
+}
+
+.key-enter {
+}
+.key-help {
+	width: 29px;
+}
+
+.key-delete {
+    background-image: url(../media/icons/keys/key_icon_delete.png);
+    height: 23px;
+   	background-position: center 0px;
+}
+
+.key-space {
+    background-image: url(../media/icons/keys/key_icon_space.png);
+	height: 100%;
+	background-size: auto 12px;
+	background-position: center center;
+	width: 228px;
 }
