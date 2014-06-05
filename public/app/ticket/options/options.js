@@ -16,7 +16,15 @@
                         data: {
                             step: 2,
                             back: 'root.ticket.via',
-                            next: function () { return 'root.ticket.date'; },
+                            next: ['TicketService', function (ticketService) {
+                                var ticket = ticketService.ticket;
+
+                                if (ticket.options.tickets.full + ticket.options.tickets.half > 0) {
+                                    return 'root.ticket.date';
+                                } else {
+                                    return false;
+                                }
+                            }],
                             title: 'Anzahl Tickets / Extras'
                         }
                     });
