@@ -43,9 +43,9 @@
 
                 service.getJourneyStop = function (suggestion) {
                     var deferred = $q.defer();
-                        $http.get('http://transport.opendata.ch/v1/locations?query=' + suggestion)
+
+                    $http.get('http://transport.opendata.ch/v1/locations?query=' + suggestion)
                         .success(function (result) {
-                            //var suggestions = JSON.parse(result);
                             deferred.resolve(result.stations);
                         })
                         .error(function (data, status) {

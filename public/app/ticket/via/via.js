@@ -9,7 +9,8 @@
                         url: '/via',
                         views: {
                             'content@root.ticket': {
-                                templateUrl: 'app/ticket/via/via.tpl.html'
+                                templateUrl: 'app/ticket/via/via.tpl.html',
+                                controller: 'TicketViaCtrl'
                             }
                         },
                         data: {
@@ -19,6 +20,19 @@
                             title: 'Reiseweg – Via wählen'
                         }
                     });
+            }
+        ])
+        .controller('TicketViaCtrl', ['$scope', '$state',
+            function ($scope, $state) {
+                $scope.selectVia = function (via) {
+                    if (via === true) {
+                        $scope.ticket.to.via.direct = true;
+                    } else {
+                        $scope.ticket.to.via.direct = false;
+                        $scope.ticket.to.via.name = via;
+                    }
+                    $state.go($state.current.data.next);
+                };
             }
         ]);
 

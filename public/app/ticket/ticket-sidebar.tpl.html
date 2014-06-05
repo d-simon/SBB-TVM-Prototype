@@ -55,7 +55,7 @@
             {{ticket.options.tickets.half}} x
         </div>
         <div class="small-9 right columns ticket-label-right">
-            Erm&aumlssigt
+            Erm&auml;ssigt
             <img src="../media/icons/half_price_neg.png" width="30px">
         </div>
     </div>
@@ -95,7 +95,7 @@
             via
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            direkt
+            {{ (ticket.to.via.direct) ? 'direkt' : ticket.to.via.text }}
         </div>
     </div>
     <div class="row info-row">
