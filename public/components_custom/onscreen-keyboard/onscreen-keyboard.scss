@@ -63,13 +63,6 @@ table, tr, .jsKeyboardRow {
 	line-height: 1;
 }
 
-.button-a {
-}
-
-.button-q {
-	margin-left: 70px;
-}
-
 .key-stop {
 	width: 78px;
 }
@@ -83,6 +76,7 @@ table, tr, .jsKeyboardRow {
 .key-delete {
     background-image: url(../media/icons/keys/key_icon_delete.png);
     height: 23px;
+    width: 70px;
    	background-position: center 0px;
 }
 
