@@ -4,7 +4,7 @@
     angular.module('common.clock', [])
         .directive('clock', ['$timeout', function ($timeout) {
             return function(scope, element, attrs) {
-                var defaultDate = 'dd D. MMM YYYY / HH:MM',
+                var defaultDate = 'dd. DD.MM.YYYY / HH:mm:ss',
                     format = defaultDate;
 
                 scope.$watch(attrs.clock, function (value) {
