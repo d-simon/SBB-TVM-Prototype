@@ -4,6 +4,7 @@
     angular.module('tvmProtoApp', [
         'ui.router',
         'ngAnimate',
+        'ngTouch',
 
         'common',
         'angularMoment',
@@ -18,6 +19,7 @@
         $urlRouterProvider.otherwise('/');
     }])
     .run(['$rootScope', '$state', 'amMoment', function ($rootScope, $state, amMoment) {
+
         amMoment.changeLanguage('de');
 
         $rootScope.$safeApply = function (fn) {
