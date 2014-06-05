@@ -29,8 +29,10 @@
                         $scope.ticket.to.via.direct = true;
                     } else {
                         $scope.ticket.to.via.direct = false;
-                        $scope.ticket.to.via.name = via;
+                        $scope.ticket.to.via.text = via;
                     }
+                };
+                $scope.next = function () {
                     $state.go($state.current.data.next);
                 };
             }
