@@ -10,7 +10,7 @@
                     next:  false,
                     back:  false,
                     help:  false,
-                    falgs: false
+                    flags: false
                 };
 
                 $scope.state = {};

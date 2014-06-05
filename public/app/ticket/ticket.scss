@@ -1,5 +1,6 @@
 .ticket--content {
     width:94%;
+    min-height: 600px;
     position: absolute;
     left: 36px !important;
     top: 18px !important;
@@ -31,7 +32,7 @@
             }
         }
     }
-    &--titel {
+    &--title {
         font-size:1.4rem;
         text-shadow: none;
         margin-top: 19px;

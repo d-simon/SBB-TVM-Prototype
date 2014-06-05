@@ -63,6 +63,8 @@
 }
 
 
+
+
 .button-group {
     li:first-child .button {
         margin-right: 0;
@@ -160,4 +162,21 @@ input.button {
 .flag-world {
     background-image: url("../media/icons/country/world_map.svg");
     background-color: #e7e7e7;
+}
+
+
+.button.button-outline {
+    box-shadow:none;
+    color:#eee;
+    background: none;
+    line-height:1.4rem;
+    font-size:1.2rem;
+    padding-right:1rem;
+    padding-left:1rem;
+    border-left: 1px solid #ccc;
+    border-top:0;
+    border-radius:0;
+    &:last-of-type {
+        border-right: 1px solid #ccc;
+    }
 }

@@ -12,7 +12,7 @@
                             console.log($state,$stateParams,$state.get());
                         },
                         data: {
-                            falgs: true
+                            flags: true
                         }
                     });
             }

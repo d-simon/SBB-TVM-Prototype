@@ -1,13 +1,13 @@
 <div class="button-group">
+    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full == 0}" ng-click="removeTicket('full')">-</a></li>
     <li class="small-6"><a class="button expand">{{ticket.options.tickets.full}} x Regul&auml;r<img src="../media/icons/full_price_pos.svg" width="40px"></a>
 </li>
-    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full == 0}" ng-click="removeTicket('full')">-</a></li>
     <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.full >= 6}" ng-click="addTicket('full')">+</a></li>
 </div>
 
 <div class="button-group">
-    <li class="small-6"><a class="button expand">{{ticket.options.tickets.half}} x Erm&auml;ssigt<img src="../media/icons/half_price_pos.svg" width="40px"></li></a>
     <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">-</a></li>
+    <li class="small-6"><a class="button expand">{{ticket.options.tickets.half}} x Erm&auml;ssigt<img src="../media/icons/half_price_pos.svg" width="40px"></li></a>
     <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
 </div>
 <br><br>
