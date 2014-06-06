@@ -26,6 +26,7 @@
     "angular-animate": "~1.2.16",
     "fastclick": "~1.0.2",
     "angular-typeahead": "~0.1.4",
-    "angular-touch": "~1.2.16"
+    "angular-touch": "~1.2.16",
+    "angular-foundation": "~0.2.2"
   }
 }

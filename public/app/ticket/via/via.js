@@ -22,8 +22,8 @@
                     });
             }
         ])
-        .controller('TicketViaCtrl', ['$scope', 'TicketService', '$state',
-            function ($scope, ticketService, $state) {
+        .controller('TicketViaCtrl', ['$scope', 'TicketService', '$state', '$modal',
+            function ($scope, ticketService, $state, $modal) {
                 $scope.ticketSrv = ticketService;
 
                 $scope.selectVia = function (via) {
@@ -37,6 +37,35 @@
                 $scope.next = function () {
                     $state.go($state.current.data.next);
                 };
+
+                $scope.open = function () {
+                    var modalInstance = $modal.open({
+                        templateUrl: 'app/ticket/via/via-info.tpl.html',
+                        controller: function($scope, $modalInstance, items) {
+
+                            $scope.ok = function() {
+                                $modalInstance.close();
+                            };
+
+                            $scope.cancel = function() {
+                                $modalInstance.dismiss('cancel');
+                            };
+                        },
+                        resolve: {
+                            items: function() {
+                                return $scope.items;
+                            }
+                        }
+                    });
+
+                    modalInstance.result.then(function (selectedItem) {
+                    }, function() {
+                        console.log('Modal dismissed at: ' + new Date());
+                    });
+                };
+
+
+
             }
         ]);
 

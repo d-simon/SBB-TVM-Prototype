@@ -9,7 +9,7 @@
         'common',
         'angularMoment',
         'onscreen-keyboard',
-        'siyfion.sfTypeahead',
+        'mm.foundation',
 
         'tvmProtoApp.root',
         'tvmProtoApp.main',
