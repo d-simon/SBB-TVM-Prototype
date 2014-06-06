@@ -45,13 +45,6 @@ hr.separator {
 
 }
 
-.payment-box {
-    background: rgba(0,0,0,0.5);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
-    box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
-    padding: 20px;
-}
-
 .ticket-label-left {
     text-align: right;
     padding: 0px;
@@ -115,9 +108,17 @@ hr.separator {
 
 .payment-options {
     margin-top: 20px;
+    margin-left: 15px;
     height: 300px;
-    background-size: contain;
+    background-size: 98%;
     background-repeat: no-repeat;
     background-position:5px top;
     background-image: url(../media/icons/bezahlmoeglichkeiten.png);
+}
+
+.payment-box {
+    background: rgba(0,0,0,0.5);
+    -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+    box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+    padding: 20px 20px 20px 0;
 }
