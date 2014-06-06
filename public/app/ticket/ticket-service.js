@@ -32,8 +32,8 @@
                         until: moment().add('days', 7).format('L')
                     },
                     price: {
-                        chf: 36,
-                        eur: 30
+                        chf: 29,
+                        eur: 23.8
                     }
                 };
 
@@ -57,9 +57,19 @@
                 service.resetTicket = function () {
                     service.ticket = angular.copy(defaultTicket);
                 };
-                service.finalPrice = function () {
-                    var price = service.ticket.options.tickets.full * service.ticket.price +
-                                service.ticket.options.tickets.half * service.ticket.price * 0.5;
+                service.finalPrice = function (currency) {
+                    var price;
+                    if (currency == 'EUR') {
+                        price = service.ticket.options.tickets.full * service.ticket.price.eur +
+                                service.ticket.options.tickets.half * service.ticket.price.eur * 0.5;
+                    } else {
+                        price = service.ticket.options.tickets.full * service.ticket.price.chf +
+                                service.ticket.options.tickets.half * service.ticket.price.chf * 0.5;
+                    }
+
+                    if (service.ticket.options.klasse == 1) price *= 2;
+                    if (service.ticket.options.oneway !== true) price *= 2;
+
                     return price;
                 };
 
