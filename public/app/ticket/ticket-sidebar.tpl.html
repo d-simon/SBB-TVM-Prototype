@@ -1,6 +1,6 @@
 <h4 class="ticket-sidebar--title">{{ stepTitle || 'Ticket'}}</h4>
-<div class="ticket-sidebar--step animate-h-scale ng-hide-block ng-hide-block" ng-show="step >= 4">
-<hr class="separator">
+<div class="ticket-sidebar--step animate-h-scale ng-hide-block ng-hide-block" ng-show="step >= 4" ng-click="$state.go('root.ticket.pay')">
+    <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left ticket-highlight">
             CHF
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 4">
+<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 4" ng-click="$state.go('root.ticket.date')">
     <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 3">
+<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 3" ng-click="$state.go('root.ticket.options')">
     <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
@@ -61,7 +61,7 @@
     </div>
 </div>
 
-<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 3">
+<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 3" ng-click="$state.go('root.ticket.options')">
     <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step >= 1">
+<div class="ticket-sidebar--step animate-h-scale ng-hide-block" ng-show="step > 0" ng-click="$state.go('root.ticket.route')">
     <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
@@ -90,7 +90,7 @@
             {{ticketSrv.ticket.from.text}}
         </div>
     </div>
-    <div class="row info-row animate-h-scale ng-hide-block" ng-show="step >= 2">
+    <div class="row info-row animate-h-scale ng-hide-block" ng-show="step > 1">
         <div class="small-2 columns ticket-label-left">
             via
         </div>

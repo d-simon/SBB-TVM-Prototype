@@ -5,10 +5,10 @@
     line-height: 2rem;
     border-radius: 4px;
     background-color: rgba(0,0,0,0);
-    background-image: -o-linear-gradient(-89deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
-    background-image: -moz-linear-gradient(-89deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
-    background-image: -ms-linear-gradient(-89deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
-    background-image: linear-gradient(-179deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
+    background-image: -o-linear-gradient(-89deg, rgba(255,255,255,0.9) 0%, rgba(221,221,221,0.9) 100%);
+    background-image: -moz-linear-gradient(-89deg, rgba(255,255,255,0.9) 0%, rgba(221,221,221,0.9) 100%);
+    background-image: -ms-linear-gradient(-89deg, rgba(255,255,255,0.9) 0%, rgba(221,221,221,0.9) 100%);
+    background-image: linear-gradient(-179deg, rgba(255,255,255,0.9) 0%, rgba(221,221,221,0.9) 100%);
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -ms-transition: opacity 0.3s ease-in-out;
@@ -42,30 +42,30 @@
 
 .button.button-red {
     color: #FFFFFF;
-    background-image: -o-linear-gradient(-89deg, rgba(238,0,0,1) 0%, rgba(187,0,0,1) 100%);
-    background-image: -moz-linear-gradient(-89deg, rgba(238,0,0,1) 0%, rgba(187,0,0,1) 100%);
-    background-image: -ms-linear-gradient(-89deg, rgba(238,0,0,1) 0%, rgba(187,0,0,1) 100%);
-    background-image: linear-gradient(-179deg, rgba(238,0,0,1) 0%, rgba(187,0,0,1) 100%);
+    background-image: -o-linear-gradient(-89deg, rgba(238,0,0,0.9) 0%, rgba(187,0,0,0.9) 100%);
+    background-image: -moz-linear-gradient(-89deg, rgba(238,0,0,0.9) 0%, rgba(187,0,0,0.9) 100%);
+    background-image: -ms-linear-gradient(-89deg, rgba(238,0,0,0.9) 0%, rgba(187,0,0,0.9) 100%);
+    background-image: linear-gradient(-179deg, rgba(238,0,0,0.9) 0%, rgba(187,0,0,0.9) 100%);
 }
 
 .button.button-blue {
     color: #FFFFFF;
-    background-image: -o-linear-gradient(-89deg, rgba(0,51,153,1) 0%, rgba(0,34,102,1) 100%);
-    background-image: -moz-linear-gradient(-89deg, rgba(0,51,153,1) 0%, rgba(0,34,102,1) 100%);
-    background-image: -ms-linear-gradient(-89deg, rgba(0,51,153,1) 0%, rgba(0,34,102,1) 100%);
-    background-image: linear-gradient(-179deg, rgba(0,51,153,1) 0%, rgba(0,34,102,1) 100%);
+    background-image: -o-linear-gradient(-89deg, rgba(0,51,153,0.9) 0%, rgba(0,34,102,0.9) 100%);
+    background-image: -moz-linear-gradient(-89deg, rgba(0,51,153,0.9) 0%, rgba(0,34,102,0.9) 100%);
+    background-image: -ms-linear-gradient(-89deg, rgba(0,51,153,0.9) 0%, rgba(0,34,102,0.9) 100%);
+    background-image: linear-gradient(-179deg, rgba(0,51,153,0.9) 0%, rgba(0,34,102,0.9) 100%);
 }
 
 
 .button.button-toggled {
-    // background-image: -o-linear-gradient(-89deg, rgba(21,21,21,1) 0%, rgba(69,69,69,1) 100%);
-    // background-image: -moz-linear-gradient(-89deg, rgba(21,21,21,1) 0%, rgba(69,69,69,1) 100%);
-    // background-image: -ms-linear-gradient(-89deg, rgba(21,21,21,1) 0%, rgba(69,69,69,1) 100%);
-    // background-image: linear-gradient(-179deg, rgba(21,21,21,1) 0%, rgba(69,69,69,1) 100%);
-    background-image: -o-linear-gradient(-89deg, rgba(109,109,109,1) 0%, rgba(147,147,147,1) 100%);
-    background-image: -moz-linear-gradient(-89deg, rgba(109,109,109,1) 0%, rgba(147,147,147,1) 100%);
-    background-image: -ms-linear-gradient(-89deg, rgba(109,109,109,1) 0%, rgba(147,147,147,1) 100%);
-    background-image: linear-gradient(-179deg, rgba(109,109,109,1) 0%, rgba(147,147,147,1) 100%);
+    // background-image: -o-linear-gradient(-89deg, rgba(21,21,21,0.9) 0%, rgba(69,69,69,0.9) 100%);
+    // background-image: -moz-linear-gradient(-89deg, rgba(21,21,21,0.9) 0%, rgba(69,69,69,0.9) 100%);
+    // background-image: -ms-linear-gradient(-89deg, rgba(21,21,21,0.9) 0%, rgba(69,69,69,0.9) 100%);
+    // background-image: linear-gradient(-179deg, rgba(21,21,21,0.9) 0%, rgba(69,69,69,0.9) 100%);
+    background-image: -o-linear-gradient(-89deg, rgba(109,109,109,0.9) 0%, rgba(147,147,147,0.9) 100%);
+    background-image: -moz-linear-gradient(-89deg, rgba(109,109,109,0.9) 0%, rgba(147,147,147,0.9) 100%);
+    background-image: -ms-linear-gradient(-89deg, rgba(109,109,109,0.9) 0%, rgba(147,147,147,0.9) 100%);
+    background-image: linear-gradient(-179deg, rgba(109,109,109,0.9) 0%, rgba(147,147,147,0.9) 100%);
     -moz-box-shadow:    inset 1px 1px 11px 3px rgba(0,0,0,0.33) !important;
     box-shadow:         inset 1px 1px 11px 3px rgba(0,0,0,0.33) !important;
     color:#FFFFFF;

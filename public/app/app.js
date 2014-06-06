@@ -18,7 +18,7 @@
     .config(['$urlRouterProvider', function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
     }])
-    .run(['$rootScope', '$state', 'amMoment', function ($rootScope, $state, amMoment) {
+    .run(['$rootScope', '$state', 'amMoment', 'StateDataService', function ($rootScope, $state, amMoment, stateService) {
 
         amMoment.changeLanguage('de');
 
@@ -34,6 +34,8 @@
         };
 
         $rootScope.$state = $state;
+        $rootScope.stateSrv = stateService;
+
     }]);
 
 }());

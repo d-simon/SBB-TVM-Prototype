@@ -42,6 +42,14 @@
 hr.separator {
     border-top: 1px solid;
     border-top-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.payment-box {
+    background: rgba(0,0,0,0.5);
+    -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+    box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+    padding: 20px;
 }
 
 .ticket-label-left {
