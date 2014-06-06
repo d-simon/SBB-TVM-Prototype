@@ -1,14 +1,14 @@
 <h4>Anzahl Tickets</h4>
 <div class="button-group">
-    <li class="small-3"><a class="button button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.full == 0}" ng-click="removeTicket('full')">-</a></li>
+    <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.full == 0}" ng-click="removeTicket('full')">–</a></li>
     <li class="small-6"><a class="button expand"><b>{{ticketSrv.ticket.options.tickets.full}} x</b> Regul&auml;r <span class="options-icon options-fullprice"></span></a></li>
-    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.full >= 6}" ng-click="addTicket('full')">+</a></li>
+    <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.full >= 6}" ng-click="addTicket('full')">+</a></li>
 </div>
 
 <div class="button-group">
-    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">-</a></li>
+    <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">–</a></li>
     <li class="small-6"><a class="button expand"><b>{{ticketSrv.ticket.options.tickets.half}}</b> x Erm&auml;ssigt <span class="options-icon options-halfprice"></span></a></li>
-    <li class="small-3"><a class="button  button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
+    <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
 </div>
 <br><br>
 <h4>Fahrtoptionen</h4>
