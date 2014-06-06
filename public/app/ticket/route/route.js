@@ -35,8 +35,6 @@
             function ($scope, ticketService) {
                 $scope.ticketSrv = ticketService;
                 $scope.ticket = ticketService.ticket;
-                $scope.yo = 'yo';
-                console.log('TicketRouteCtrl')
                 // $scope.ticket
                 $scope.$watch(
                     function () {
@@ -60,10 +58,10 @@
                 $scope.clickTicket = function (val) {
                     switch(val) {
                         case 'to':
-                            $('input[name=ticket-to]').click();
+                            $('input[name=ticket-to]').val("").click();
                             break;
                         case 'from':
-                            $('input[name=ticket-from]').click();
+                            $('input[name=ticket-from]').val("").click();
                             break;
                     }
                 };
