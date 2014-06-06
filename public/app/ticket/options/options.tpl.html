@@ -7,7 +7,7 @@
 
 <div class="button-group">
     <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half == 0}" ng-click="removeTicket('half')">–</a></li>
-    <li class="small-6"><a class="button expand"><b>{{ticketSrv.ticket.options.tickets.half}}</b> x Erm&auml;ssigt <span class="options-icon options-halfprice"></span></a></li>
+    <li class="small-6"><a class="button expand"><b>{{ticketSrv.ticket.options.tickets.half}} x</b> Erm&auml;ssigt <span class="options-icon options-halfprice"></span></a></li>
     <li class="small-3"><a class="button button-large-font button-red expand" ng-class="{'button-inactive': ticketSrv.ticket.options.tickets.half >= 6}" ng-click="addTicket('half')">+</a></li>
 </div>
 <br><br>
@@ -18,8 +18,16 @@
 </div>
 
 <div class="button-group">
-    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = true"><span class="options-icon options-oneway"></span></a></li>
-    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': !ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = false"><span class="options-icon options-return"></span></a></li>
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = true">
+        <span class="options-icon options-oneway" ng-show="!ticketSrv.ticket.options.oneway"></span>
+        <span class="options-icon options-oneway-neg" ng-show="ticketSrv.ticket.options.oneway"></span>
+    </a></li>
+    <li class="small-6">
+        <a class="button expand" ng-class="{'button-toggled': !ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = false">
+            <span class="options-icon options-return"  ng-show="ticketSrv.ticket.options.oneway"></span>
+            <span class="options-icon options-return-neg"  ng-show="!ticketSrv.ticket.options.oneway"></span>
+        </a>
+    </li>
 </div>
 
 

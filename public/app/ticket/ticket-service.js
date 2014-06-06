@@ -32,8 +32,8 @@
                         until: moment().add('days', 1).format('L')
                     },
                     price: {
-                        chf: 29,
-                        eur: 23.8
+                        chf: 30,
+                        eur: 24.6
                     }
                 };
 
