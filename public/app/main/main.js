@@ -8,13 +8,18 @@
                     .state('root.main', {
                         url: '/',
                         templateUrl: 'app/main/main.tpl.html',
-                        controller: function ($state,$stateParams) {
-                            console.log($state,$stateParams,$state.get());
-                        },
+                        controller: 'MainCtrl',
                         data: {
                             flags: true
                         }
                     });
+            }
+        ])
+        .controller('MainCtrl', ['$scope', 'TicketService',
+            function ($scope, ticketService) {
+                $scope.resetTicket = function () {
+                    ticketService.resetTicket();
+                };
             }
         ]);
 
