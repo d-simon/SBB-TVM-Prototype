@@ -9,7 +9,8 @@
                         url: '/pay',
                         views: {
                             'content@root.ticket': {
-                                templateUrl: 'app/ticket/pay/pay.tpl.html'
+                                templateUrl: 'app/ticket/pay/pay.tpl.html',
+                                controller: 'TicketPayCtrl'
                             }
                         },
                         data: {
@@ -22,7 +23,7 @@
                     });
             }
         ])
-        .controller('TicketRouteCtrl', ['$scope', 'TicketService',
+        .controller('TicketPayCtrl', ['$scope', 'TicketService',
             function ($scope, ticketService) {
                 $scope.ticketSrv = ticketService;
             }
