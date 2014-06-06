@@ -22,8 +22,8 @@
                     });
             }
         ])
-        .factory('StateDataService', ['$injector', '$rootScope', '$state',
-            function ($injector, $rootScope, $state) {
+        .factory('StateDataService', ['$injector', '$rootScope', '$state', 'TicketService',
+            function ($injector, $rootScope, $state, ticketService) {
 
                 var service = {},
                     defaultState = {
@@ -82,6 +82,8 @@
                         console.log('--- $digest START');
                         service.state = evalState(storeState);
                         console.log('state',service.state);
+                        console.log('ticket', ticketService.ticket);
+
 
                         $rootScope.$$postDigest(function () {
                             service.state = evalState(storeState);
