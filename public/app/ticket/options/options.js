@@ -30,28 +30,31 @@
                     });
             }
         ])
-        .controller('TicketOptionsCtrl', ['$scope', function ($scope) {
-            console.log($scope.ticket);
-            $scope.addTicket = function (type) {
-                switch (type) {
-                    case 'full':
-                        $scope.ticket.options.tickets.full = Math.min($scope.ticket.options.tickets.full+1, 6);
-                        break;
-                    case 'half':
-                        $scope.ticket.options.tickets.half = Math.min($scope.ticket.options.tickets.half+1, 6);
-                        break;
-                }
-            };
-            $scope.removeTicket = function (type) {
-                switch (type) {
-                    case 'full':
-                        $scope.ticket.options.tickets.full = Math.max($scope.ticket.options.tickets.full-1, 0);
-                        break;
-                    case 'half':
-                        $scope.ticket.options.tickets.half = Math.max($scope.ticket.options.tickets.half-1, 0);
-                        break;
-                }
-            };
-        }]);
+        .controller('TicketOptionsCtrl', ['$scope', 'TicketService',
+            function ($scope, ticketService) {
+                $scope.ticketSrv = ticketService;
+
+                $scope.addTicket = function (type) {
+                    switch (type) {
+                        case 'full':
+                            ticketService.ticket.options.tickets.full = Math.min(ticketService.ticket.options.tickets.full+1, 6);
+                            break;
+                        case 'half':
+                            ticketService.ticket.options.tickets.half = Math.min(ticketService.ticket.options.tickets.half+1, 6);
+                            break;
+                    }
+                };
+                $scope.removeTicket = function (type) {
+                    switch (type) {
+                        case 'full':
+                            ticketService.ticket.options.tickets.full = Math.max(ticketService.ticket.options.tickets.full-1, 0);
+                            break;
+                        case 'half':
+                            ticketService.ticket.options.tickets.half = Math.max(ticketService.ticket.options.tickets.half-1, 0);
+                            break;
+                    }
+                };
+            }
+        ]);
 
 }());

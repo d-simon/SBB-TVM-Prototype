@@ -31,8 +31,9 @@
                     });
             }
         ])
-        .controller('TicketRouteCtrl', ['$scope',
-            function ($scope) {
+        .controller('TicketRouteCtrl', ['$scope', 'TicketService',
+            function ($scope, ticketService) {
+                $scope.ticketSrv = ticketService;
 
                 $scope.doneSelecting = function () {
                     $('#onscreen-keyboard').trigger('onScreenKeyPressed', 'enter');
@@ -49,9 +50,9 @@
                     }
                 };
 
-                if ($scope.ticket.from.selected !== true) {
+                if (ticketService.ticket.from.selected !== true) {
                     setTimeout(function() { $scope.clickTicket('from'); }, 0);
-                } else if ($scope.ticket.to.text.length <= 0)  {
+                } else if (ticketService.ticket.to.text.length <= 0)  {
                     setTimeout(function() { $scope.clickTicket('to'); }, 0);
                 }
             }

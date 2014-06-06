@@ -57,6 +57,11 @@
                 service.resetTicket = function () {
                     service.ticket = angular.copy(defaultTicket);
                 };
+                service.finalPrice = function () {
+                    var price = service.ticket.options.tickets.full * service.ticket.price +
+                                service.ticket.options.tickets.half * service.ticket.price * 0.5;
+                    return price;
+                };
 
                 return service;
 

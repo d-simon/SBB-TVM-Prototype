@@ -33,7 +33,7 @@
         ])
         .controller('TicketCtrl', ['$scope', '$state', 'TicketService', function ($scope, $state, ticketService) {
 
-            $scope.ticket = ticketService.ticket;
+            $scope.ticketSrv = ticketService;
             $scope.stepTitle = $state.current.data.title || false;
             $scope.step = $state.current.data.step || 0;
             // Animation

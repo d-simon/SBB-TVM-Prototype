@@ -1,7 +1,8 @@
+<h4>Reiseweg</h4>
 <ul class="button-group">
     <li class="small-9">
         <div >
-            <input class="button expand" ng-class="{'button-toggled': isactive }" ng-model="ticket.from.text" id="ticket-from" name="ticket-from" readonly="true" />
+            <input class="button expand" ng-class="{'button-toggled': isactive }" ng-model="ticketSrv.ticket.from.text" id="ticket-from" name="ticket-from" readonly="true" />
         </div>
     </li>
     <li class="small-3">
@@ -10,14 +11,14 @@
 </ul>
 <!-- quick & dirty :(
 <div style="position:relative">
-    <div class="autosuggest-container" sbb-autocomplete="ticket.from.text" sbb-autocomplete-callback="doneSelecting">
+    <div class="autosuggest-container" sbb-autocomplete="ticketSrv.ticket.from.text" sbb-autocomplete-callback="doneSelecting">
         <div class="button button-autosuggest expand" ng-repeat="suggestion in suggestions" ng-click="select(suggestion.value)">{{suggestion.value}}</div>
     </div>
 </div> -->
 <ul class="button-group">
     <li class="small-9">
         <div keyboard>
-            <input class="button expand" ng-class="{'button-toggled': isactive }" ng-model="ticket.to.text" id="ticket-to" name="ticket-to" placeholder="Zielort eingeben" readonly="true" />
+            <input class="button expand" ng-class="{'button-toggled': isactive }" ng-model="ticketSrv.ticket.to.text" id="ticket-to" name="ticket-to" placeholder="Zielort eingeben" readonly="true" />
         </div>
     </li>
     <li class="small-3">
@@ -26,7 +27,7 @@
 </ul>
 <!--  quick & dirty :(  -->
 <div style="position:relative">
-    <div class="autosuggest-container" sbb-autocomplete="ticket.to.text" sbb-autocomplete-callback="doneSelecting">
+    <div class="autosuggest-container" sbb-autocomplete="ticketSrv.ticket.to.text" sbb-autocomplete-callback="doneSelecting">
         <div class="button button-autosuggest expand animate-autosuggest" ng-repeat="suggestion in suggestions" ng-click="select(suggestion.name)">{{suggestion.name}}</div>
     </div>
 </div>

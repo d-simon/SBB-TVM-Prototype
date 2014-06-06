@@ -6,7 +6,7 @@
             CHF
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.price.chf | currency:""}}
+            {{ticketSrv.ticket.price.chf | currency:""}}
         </div>
     </div>
     <div class="row info-row">
@@ -14,7 +14,7 @@
             EUR
         </div>
         <div class="small-9 right columns ticket-label-right">
-            {{ticket.price.eur | currency:""}}
+            {{ticketSrv.ticket.price.eur | currency:""}}
         </div>
     </div>
 </div>
@@ -26,7 +26,7 @@
             ab
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.date.from}}
+            {{ticketSrv.ticket.date.from}}
         </div>
     </div>
     <div class="row info-row">
@@ -34,7 +34,7 @@
             bis
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.date.until}}
+            {{ticketSrv.ticket.date.until}}
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@
     <hr class="separator">
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
-            {{ticket.options.tickets.full}} x
+            {{ticketSrv.ticket.options.tickets.full}} x
         </div>
         <div class="small-9 right columns ticket-label-right">
             Regul&aumlr
@@ -52,7 +52,7 @@
     </div>
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
-            {{ticket.options.tickets.half}} x
+            {{ticketSrv.ticket.options.tickets.half}} x
         </div>
         <div class="small-9 right columns ticket-label-right">
             Erm&aumlssigt
@@ -67,15 +67,15 @@
         <div class="small-2 columns ticket-label-left">
         </div>
         <div class="small-9 right columns ticket-label-right">
-            {{ticket.options.klasse}}. Klasse
+            {{ticketSrv.ticket.options.klasse}}. Klasse
         </div>
     </div>
     <div class="row info-row">
         <div class="small-2 columns ticket-label-left">
         </div>
         <div class="small-9 right columns ticket-label-right">
-            <span ng-show="ticket.options.oneway" class="options-icon options-oneway-neg"></span>
-            <span ng-show="!ticket.options.oneway" class="options-icon options-return-neg"></span>
+            <span ng-show="ticketSrv.ticket.options.oneway" class="options-icon options-oneway-neg"></span>
+            <span ng-show="!ticketSrv.ticket.options.oneway" class="options-icon options-return-neg"></span>
         </div>
     </div>
 </div>
@@ -87,7 +87,7 @@
             von
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.from.text}}
+            {{ticketSrv.ticket.from.text}}
         </div>
     </div>
     <div class="row info-row animate-h-scale ng-hide-block" ng-show="step >= 2">
@@ -95,7 +95,7 @@
             via
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ (ticket.to.via.direct) ? 'direkt' : ticket.to.via.text }}
+            {{ (ticketSrv.ticket.to.via.direct) ? 'direkt' : ticketSrv.ticket.to.via.text }}
         </div>
     </div>
     <div class="row info-row">
@@ -103,7 +103,7 @@
             nach
         </div>
         <div class="small-9 right columns ticket-label-right ticket-highlight">
-            {{ticket.to.text || '…'}}
+            {{ticketSrv.ticket.to.text || '…'}}
         </div>
     </div>
 </div>

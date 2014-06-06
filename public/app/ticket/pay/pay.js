@@ -21,6 +21,11 @@
                         }
                     });
             }
+        ])
+        .controller('TicketRouteCtrl', ['$scope', 'TicketService',
+            function ($scope, ticketService) {
+                $scope.ticketSrv = ticketService;
+            }
         ]);
 
 }());

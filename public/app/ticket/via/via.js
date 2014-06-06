@@ -22,14 +22,16 @@
                     });
             }
         ])
-        .controller('TicketViaCtrl', ['$scope', '$state',
-            function ($scope, $state) {
+        .controller('TicketViaCtrl', ['$scope', 'TicketService', '$state',
+            function ($scope, ticketService, $state) {
+                $scope.ticketSrv = ticketService;
+
                 $scope.selectVia = function (via) {
                     if (via === true) {
-                        $scope.ticket.to.via.direct = true;
+                        ticketService.ticket.to.via.direct = true;
                     } else {
-                        $scope.ticket.to.via.direct = false;
-                        $scope.ticket.to.via.text = via;
+                        ticketService.ticket.to.via.direct = false;
+                        ticketService.ticket.to.via.text = via;
                     }
                 };
                 $scope.next = function () {
