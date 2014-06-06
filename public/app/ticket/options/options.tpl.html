@@ -18,14 +18,14 @@
 </div>
 
 <div class="button-group">
-    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = true">
+    <li class="small-6"><a class="button expand" ng-class="{'button-toggled': ticketSrv.ticket.options.oneway === true}" ng-click="ticketSrv.ticket.options.oneway = true">
         <span class="options-icon options-oneway" ng-show="!ticketSrv.ticket.options.oneway"></span>
         <span class="options-icon options-oneway-neg" ng-show="ticketSrv.ticket.options.oneway"></span>
     </a></li>
     <li class="small-6">
-        <a class="button expand" ng-class="{'button-toggled': !ticketSrv.ticket.options.oneway}" ng-click="ticketSrv.ticket.options.oneway = false">
-            <span class="options-icon options-return"  ng-show="ticketSrv.ticket.options.oneway"></span>
-            <span class="options-icon options-return-neg"  ng-show="!ticketSrv.ticket.options.oneway"></span>
+        <a class="button expand" ng-class="{'button-toggled': ticketSrv.ticket.options.oneway === false}" ng-click="ticketSrv.ticket.options.oneway = false">
+            <span class="options-icon options-return"  ng-show="ticketSrv.ticket.options.oneway || ticketSrv.ticket.options.oneway.length == 0"></span>
+            <span class="options-icon options-return-neg"  ng-show="ticketSrv.ticket.options.oneway === false"></span>
         </a>
     </li>
 </div>

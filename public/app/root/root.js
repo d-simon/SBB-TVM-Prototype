@@ -40,6 +40,10 @@
                 storeState = createState($state.current.data);
                 service.state = evalState(storeState);
 
+                service.resetState = function () {
+                    service.state = createState($state.current.data);
+                };
+
                 function createState (data) {
                     var createState = angular.copy(defaultState);
                     angular.extend(createState, data);

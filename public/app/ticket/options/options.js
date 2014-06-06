@@ -19,7 +19,10 @@
                             next: ['TicketService', function (ticketService) {
                                 var ticket = ticketService.ticket;
 
-                                if (ticket.options.tickets.full + ticket.options.tickets.half > 0) {
+                                if (ticket.options.tickets.full + ticket.options.tickets.half > 0 &&
+                                    ticket.options.klasse < 3 &&
+                                    ticket.options.oneway !== ''
+                                ) {
                                     return 'root.ticket.date';
                                 } else {
                                     return false;

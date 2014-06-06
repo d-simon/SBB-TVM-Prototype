@@ -20,8 +20,8 @@
                         }
                     },
                     options: {
-                        oneway: true,
-                        klasse: 2,
+                        oneway: '',
+                        klasse: 3,
                         tickets: {
                             full: 0,
                             half: 0
