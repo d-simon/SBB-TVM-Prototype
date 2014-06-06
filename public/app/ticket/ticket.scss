@@ -104,3 +104,12 @@ hr.separator {
 .options-return-neg {
     background-image: url(../media/icons/return_neg.png);
 }
+
+.payment-options {
+    margin-top: 20px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:5px top;
+    background-image: url(../media/icons/bezahlmoeglichkeiten.png);
+}

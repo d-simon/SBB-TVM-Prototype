@@ -29,7 +29,7 @@
                     },
                     date: {
                         from: moment().format('L'),
-                        until: moment().add('days', 7).format('L')
+                        until: moment().add('days', 1).format('L')
                     },
                     price: {
                         chf: 29,
