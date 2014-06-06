@@ -20,7 +20,7 @@
                             next: ['TicketService', function (ticketService) {
                                 var ticket = ticketService.ticket;
 
-                                if (ticket.to.text.length + ticket.from.text.length > 0) {
+                                if (ticket.to.text.length && ticket.from.text.length) {
                                     return 'root.ticket.via';
                                 } else {
                                     return false;
@@ -34,6 +34,24 @@
         .controller('TicketRouteCtrl', ['$scope', 'TicketService',
             function ($scope, ticketService) {
                 $scope.ticketSrv = ticketService;
+                $scope.ticket = ticketService.ticket;
+                $scope.yo = 'yo';
+                console.log('TicketRouteCtrl')
+                // $scope.ticket
+                $scope.$watch(
+                    function () {
+                        return ticketService.ticket;
+                    },
+                    function () {
+                        console.log('to scope')
+                        $scope.ticket = ticketService.ticket;
+                    }
+                );
+                $scope.$watch('ticket', function (ticket) {
+                        console.log('from scope')
+                    ticketService.ticket = ticket;
+                });
+
 
                 $scope.doneSelecting = function () {
                     $('#onscreen-keyboard').trigger('onScreenKeyPressed', 'enter');

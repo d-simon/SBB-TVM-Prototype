@@ -30,6 +30,7 @@
                     };
 
                     $scope.$watch($attrs.sbbAutocomplete, function (value) {
+                        console.log('value');
                         if ($scope.resetOnNextUpdate) {
                             $scope.resetOnNextUpdate = false;
                             $scope.suggestions = [];

@@ -79,15 +79,15 @@
                     if (service.stateHasBeenUpdated) return;
                         service.stateHasBeenUpdated = true;
 
-                        console.log('--- $digest START');
+                        // console.log('--- $digest START');
                         service.state = evalState(storeState);
-                        console.log('state',service.state);
-                        console.log('ticket', ticketService.ticket);
+                        // console.log('state',service.state);
+                        // console.log('ticket', ticketService.ticket);
 
 
                         $rootScope.$$postDigest(function () {
                             service.state = evalState(storeState);
-                            console.log('--- $digest END');
+                            // console.log('--- $digest END');
 
                             service.stateHasBeenUpdated = false;
                         });
